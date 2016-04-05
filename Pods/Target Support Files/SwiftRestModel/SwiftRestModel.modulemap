@@ -1,0 +1,6 @@
+framework module SwiftRestModel {
+  umbrella header "SwiftRestModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

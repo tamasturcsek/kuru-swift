@@ -6,4 +6,14 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
-import Foundation
+class Customer {
+    var id: Int
+    var code: String
+    var name: String
+    
+    init(id: Int, code: String, name: String) {
+        self.id = id
+        self.code = code
+        self.name = name
+    }
+}

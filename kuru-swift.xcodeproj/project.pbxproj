@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E9D13857563B113DE /* Pods.framework */; };
 		FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */; };
-		FC4E71A51CA48D42004D9B54 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* FirstViewController.swift */; };
-		FC4E71A71CA48D42004D9B54 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A61CA48D42004D9B54 /* SecondViewController.swift */; };
+		FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */; };
+		FC4E71A71CA48D42004D9B54 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A61CA48D42004D9B54 /* CartViewController.swift */; };
 		FC4E71AA1CA48D42004D9B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4E71A81CA48D42004D9B54 /* Main.storyboard */; };
-		FC4E71AC1CA48D42004D9B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4E71AB1CA48D42004D9B54 /* Assets.xcassets */; };
 		FC4E71AF1CA48D42004D9B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4E71AD1CA48D42004D9B54 /* LaunchScreen.storyboard */; };
 		FC4E71BA1CA48D42004D9B54 /* kuru_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71B91CA48D42004D9B54 /* kuru_swiftTests.swift */; };
 		FC4E71C51CA48D42004D9B54 /* kuru_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71C41CA48D42004D9B54 /* kuru_swiftUITests.swift */; };
+		FC4E71D31CA496E1004D9B54 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71D21CA496E1004D9B54 /* HistoryViewController.swift */; };
+		FC4E71D51CA4989D004D9B54 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71D41CA4989D004D9B54 /* CustomerViewController.swift */; };
+		FC53AB4E1CA88EE70045D4E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4E71AB1CA48D42004D9B54 /* Assets.xcassets */; };
+		FC53AB501CA893510045D4E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53AB4F1CA893510045D4E8 /* LoginViewController.swift */; };
+		FC5933AC1CAEC9ED00081C4A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AB1CAEC9ED00081C4A /* Article.swift */; };
+		FC5933AE1CAECB7400081C4A /* ArticleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */; };
+		FC5933B01CAECC1900081C4A /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AF1CAECC1900081C4A /* Bill.swift */; };
+		FC86296C1CB411F400A68A17 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296B1CB411F400A68A17 /* Customer.swift */; };
+		FC86296E1CB4130D00A68A17 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296D1CB4130D00A68A17 /* Item.swift */; };
+		FC8629701CB413F700A68A17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296F1CB413F700A68A17 /* User.swift */; };
+		FC8629721CB4146900A68A17 /* ValueSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8629711CB4146900A68A17 /* ValueSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5BAE7E9D13857563B113DE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FC4E719F1CA48D42004D9B54 /* kuru-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kuru-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC4E71A41CA48D42004D9B54 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FC4E71A61CA48D42004D9B54 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		FC4E71A61CA48D42004D9B54 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		FC4E71A91CA48D42004D9B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC4E71AB1CA48D42004D9B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4E71AE1CA48D42004D9B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,16 @@
 		FC4E71C01CA48D42004D9B54 /* kuru-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kuru-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E71C41CA48D42004D9B54 /* kuru_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kuru_swiftUITests.swift; sourceTree = "<group>"; };
 		FC4E71C61CA48D42004D9B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4E71D21CA496E1004D9B54 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		FC4E71D41CA4989D004D9B54 /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		FC53AB4F1CA893510045D4E8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC5933AB1CAEC9ED00081C4A /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCategory.swift; sourceTree = "<group>"; };
+		FC5933AF1CAECC1900081C4A /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		FC86296B1CB411F400A68A17 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		FC86296D1CB4130D00A68A17 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FC86296F1CB413F700A68A17 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC8629711CB4146900A68A17 /* ValueSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215D5C113B404D51E4DBECA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */,
+				586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B2F1CC7E57B561D4CAAF108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A5BAE7E9D13857563B113DE /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC4E71961CA48D42004D9B54 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				FC4E71B81CA48D42004D9B54 /* kuru-swiftTests */,
 				FC4E71C31CA48D42004D9B54 /* kuru-swiftUITests */,
 				FC4E71A01CA48D42004D9B54 /* Products */,
+				215D5C113B404D51E4DBECA4 /* Pods */,
+				2B2F1CC7E57B561D4CAAF108 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +143,14 @@
 		FC4E71A11CA48D42004D9B54 /* kuru-swift */ = {
 			isa = PBXGroup;
 			children = (
+				FC5933AA1CAEC6C800081C4A /* objects */,
+				FC6F57271CA5FC0A005120AC /* rest */,
 				FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */,
-				FC4E71A41CA48D42004D9B54 /* FirstViewController.swift */,
-				FC4E71A61CA48D42004D9B54 /* SecondViewController.swift */,
+				FC53AB4F1CA893510045D4E8 /* LoginViewController.swift */,
+				FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */,
+				FC4E71A61CA48D42004D9B54 /* CartViewController.swift */,
+				FC4E71D21CA496E1004D9B54 /* HistoryViewController.swift */,
+				FC4E71D41CA4989D004D9B54 /* CustomerViewController.swift */,
 				FC4E71A81CA48D42004D9B54 /* Main.storyboard */,
 				FC4E71AB1CA48D42004D9B54 /* Assets.xcassets */,
 				FC4E71AD1CA48D42004D9B54 /* LaunchScreen.storyboard */,
@@ -128,6 +177,27 @@
 			path = "kuru-swiftUITests";
 			sourceTree = "<group>";
 		};
+		FC5933AA1CAEC6C800081C4A /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				FC5933AB1CAEC9ED00081C4A /* Article.swift */,
+				FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */,
+				FC5933AF1CAECC1900081C4A /* Bill.swift */,
+				FC86296B1CB411F400A68A17 /* Customer.swift */,
+				FC86296D1CB4130D00A68A17 /* Item.swift */,
+				FC86296F1CB413F700A68A17 /* User.swift */,
+				FC8629711CB4146900A68A17 /* ValueSet.swift */,
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
+		FC6F57271CA5FC0A005120AC /* rest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = rest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC4E71C91CA48D42004D9B54 /* Build configuration list for PBXNativeTarget "kuru-swift" */;
 			buildPhases = (
+				106CD476B4BD995C730ACBE7 /* Check Pods Manifest.lock */,
 				FC4E719B1CA48D42004D9B54 /* Sources */,
 				FC4E719C1CA48D42004D9B54 /* Frameworks */,
 				FC4E719D1CA48D42004D9B54 /* Resources */,
+				03B21BCE726FAF8FFAB44998 /* Embed Pods Frameworks */,
+				920ADF9D90FFAA862B2EE331 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +269,7 @@
 				TargetAttributes = {
 					FC4E719E1CA48D42004D9B54 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 679X9L56L6;
 					};
 					FC4E71B41CA48D42004D9B54 = {
 						CreatedOnToolsVersion = 7.3;
@@ -233,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4E71AF1CA48D42004D9B54 /* LaunchScreen.storyboard in Resources */,
-				FC4E71AC1CA48D42004D9B54 /* Assets.xcassets in Resources */,
+				FC53AB4E1CA88EE70045D4E8 /* Assets.xcassets in Resources */,
 				FC4E71AA1CA48D42004D9B54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +328,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03B21BCE726FAF8FFAB44998 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		106CD476B4BD995C730ACBE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		920ADF9D90FFAA862B2EE331 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC4E719B1CA48D42004D9B54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4E71A71CA48D42004D9B54 /* SecondViewController.swift in Sources */,
+				FC5933AC1CAEC9ED00081C4A /* Article.swift in Sources */,
+				FC86296C1CB411F400A68A17 /* Customer.swift in Sources */,
+				FC53AB501CA893510045D4E8 /* LoginViewController.swift in Sources */,
+				FC5933AE1CAECB7400081C4A /* ArticleCategory.swift in Sources */,
+				FC4E71A71CA48D42004D9B54 /* CartViewController.swift in Sources */,
+				FC8629721CB4146900A68A17 /* ValueSet.swift in Sources */,
 				FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */,
-				FC4E71A51CA48D42004D9B54 /* FirstViewController.swift in Sources */,
+				FC86296E1CB4130D00A68A17 /* Item.swift in Sources */,
+				FC4E71D51CA4989D004D9B54 /* CustomerViewController.swift in Sources */,
+				FC8629701CB413F700A68A17 /* User.swift in Sources */,
+				FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */,
+				FC5933B01CAECC1900081C4A /* Bill.swift in Sources */,
+				FC4E71D31CA496E1004D9B54 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,9 +535,12 @@
 		};
 		FC4E71CA1CA48D42004D9B54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "kuru-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.kuru-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,9 +549,12 @@
 		};
 		FC4E71CB1CA48D42004D9B54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "kuru-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.kuru-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,6 +626,7 @@
 				FC4E71CB1CA48D42004D9B54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC4E71CC1CA48D42004D9B54 /* Build configuration list for PBXNativeTarget "kuru-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +635,7 @@
 				FC4E71CE1CA48D42004D9B54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC4E71CF1CA48D42004D9B54 /* Build configuration list for PBXNativeTarget "kuru-swiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +644,7 @@
 				FC4E71D11CA48D42004D9B54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
