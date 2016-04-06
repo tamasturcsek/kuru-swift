@@ -145,12 +145,8 @@
 			children = (
 				FC5933AA1CAEC6C800081C4A /* objects */,
 				FC6F57271CA5FC0A005120AC /* rest */,
+				FC7C38DD1CB566E300B1DFD4 /* viewControllers */,
 				FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */,
-				FC53AB4F1CA893510045D4E8 /* LoginViewController.swift */,
-				FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */,
-				FC4E71A61CA48D42004D9B54 /* CartViewController.swift */,
-				FC4E71D21CA496E1004D9B54 /* HistoryViewController.swift */,
-				FC4E71D41CA4989D004D9B54 /* CustomerViewController.swift */,
 				FC4E71A81CA48D42004D9B54 /* Main.storyboard */,
 				FC4E71AB1CA48D42004D9B54 /* Assets.xcassets */,
 				FC4E71AD1CA48D42004D9B54 /* LaunchScreen.storyboard */,
@@ -189,6 +185,7 @@
 				FC8629711CB4146900A68A17 /* ValueSet.swift */,
 			);
 			name = objects;
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		FC6F57271CA5FC0A005120AC /* rest */ = {
@@ -196,6 +193,19 @@
 			children = (
 			);
 			name = rest;
+			sourceTree = "<group>";
+		};
+		FC7C38DD1CB566E300B1DFD4 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC53AB4F1CA893510045D4E8 /* LoginViewController.swift */,
+				FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */,
+				FC4E71A61CA48D42004D9B54 /* CartViewController.swift */,
+				FC4E71D21CA496E1004D9B54 /* HistoryViewController.swift */,
+				FC4E71D41CA4989D004D9B54 /* CustomerViewController.swift */,
+			);
+			name = viewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
