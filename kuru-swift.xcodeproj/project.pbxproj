@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0108618B1CB6521D00728C5D /* CustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108618A1CB6521D00728C5D /* CustomerService.swift */; };
+		0108618F1CB6526300728C5D /* CustomerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108618E1CB6526300728C5D /* CustomerServiceTests.swift */; };
+		010861901CB652C700728C5D /* CustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108618A1CB6521D00728C5D /* CustomerService.swift */; };
+		010861911CB652EB00728C5D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296B1CB411F400A68A17 /* Customer.swift */; };
+		010861941CB6562B00728C5D /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010861931CB6562B00728C5D /* CustomerTests.swift */; };
 		77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E9D13857563B113DE /* Pods.framework */; };
 		FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */; };
 		FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */; };
@@ -46,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0108618A1CB6521D00728C5D /* CustomerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerService.swift; sourceTree = "<group>"; };
+		0108618E1CB6526300728C5D /* CustomerServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerServiceTests.swift; sourceTree = "<group>"; };
+		010861931CB6562B00728C5D /* CustomerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		1A5BAE7E9D13857563B113DE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +109,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0108618C1CB6523A00728C5D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				0108618A1CB6521D00728C5D /* CustomerService.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		0108618D1CB6525200728C5D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				0108618E1CB6526300728C5D /* CustomerServiceTests.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		010861921CB6562100728C5D /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				010861931CB6562B00728C5D /* CustomerTests.swift */,
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
 		215D5C113B404D51E4DBECA4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5933AA1CAEC6C800081C4A /* objects */,
-				FC6F57271CA5FC0A005120AC /* rest */,
+				0108618C1CB6523A00728C5D /* service */,
 				FC7C38DD1CB566E300B1DFD4 /* viewControllers */,
 				FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */,
 				FC4E71A81CA48D42004D9B54 /* Main.storyboard */,
@@ -158,6 +190,8 @@
 		FC4E71B81CA48D42004D9B54 /* kuru-swiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				010861921CB6562100728C5D /* objects */,
+				0108618D1CB6525200728C5D /* service */,
 				FC4E71B91CA48D42004D9B54 /* kuru_swiftTests.swift */,
 				FC4E71BB1CA48D42004D9B54 /* Info.plist */,
 			);
@@ -186,13 +220,6 @@
 			);
 			name = objects;
 			path = Objects;
-			sourceTree = "<group>";
-		};
-		FC6F57271CA5FC0A005120AC /* rest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = rest;
 			sourceTree = "<group>";
 		};
 		FC7C38DD1CB566E300B1DFD4 /* viewControllers */ = {
@@ -392,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5933AC1CAEC9ED00081C4A /* Article.swift in Sources */,
+				0108618B1CB6521D00728C5D /* CustomerService.swift in Sources */,
 				FC86296C1CB411F400A68A17 /* Customer.swift in Sources */,
 				FC53AB501CA893510045D4E8 /* LoginViewController.swift in Sources */,
 				FC5933AE1CAECB7400081C4A /* ArticleCategory.swift in Sources */,
@@ -411,7 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010861901CB652C700728C5D /* CustomerService.swift in Sources */,
 				FC4E71BA1CA48D42004D9B54 /* kuru_swiftTests.swift in Sources */,
+				0108618F1CB6526300728C5D /* CustomerServiceTests.swift in Sources */,
+				010861911CB652EB00728C5D /* Customer.swift in Sources */,
+				010861941CB6562B00728C5D /* CustomerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

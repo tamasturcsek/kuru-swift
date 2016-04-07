@@ -6,6 +6,8 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
+let customerService = CustomerService()
+
 class Customer {
     var id: Int
     var code: String
@@ -15,5 +17,9 @@ class Customer {
         self.id = id
         self.code = code
         self.name = name
+    }
+    
+    class func findAll(success: ((response: [Customer]) -> ())) {
+        customerService.findAll(success)
     }
 }
