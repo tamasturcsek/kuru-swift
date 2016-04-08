@@ -6,6 +6,8 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
+let articleCategoryService = ArticleCategoryService()
+
 class ArticleCategory {
     var id: Int
     var code: String
@@ -17,5 +19,9 @@ class ArticleCategory {
         self.code = code
         self.name = name
         self.icon = icon
+    }
+    
+    class func findAll(success: ((response: [ArticleCategory]) -> ())) {
+        articleCategoryService.findAll(success)
     }
 }

@@ -13,13 +13,33 @@ import SwiftyJSON
 class ArticlesViewController: UIViewController {
     
     @IBOutlet weak var articleCategoryScroll: UIScrollView!
-    @IBOutlet weak var articles: UICollectionView!
+    var containerView = UIView()
+    @IBOutlet weak var articlesView: UICollectionView!
+    var articles = [Article]()
+    var articleCategories = [ArticleCategory]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshArticleCategories()
         // Do any additional setup after loading the view, typically from a nib.
 
     }
+    
+    func refreshArticleCategories() {
+        ArticleCategory.findAll({
+            response in
+            self.articleCategories = response
+            
+        })
+    }
+    
+    
+    func refreshArticleCategories(sender:AnyObject) {
+        refreshArticleCategories()
+    }
+
+    
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
