@@ -27,6 +27,7 @@
 		FC5933AC1CAEC9ED00081C4A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AB1CAEC9ED00081C4A /* Article.swift */; };
 		FC5933AE1CAECB7400081C4A /* ArticleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */; };
 		FC5933B01CAECC1900081C4A /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AF1CAECC1900081C4A /* Bill.swift */; };
+		FC60E1D21CBC26BE0003D87F /* BIllService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60E1D11CBC26BE0003D87F /* BIllService.swift */; };
 		FC839DC91CB808B200827448 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC839DC81CB808B200827448 /* ArticleService.swift */; };
 		FC839DCB1CB8159B00827448 /* ArticleCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC839DCA1CB8159B00827448 /* ArticleCategoryService.swift */; };
 		FC839DCD1CB8258200827448 /* KuruVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC839DCC1CB8258200827448 /* KuruVariables.swift */; };
@@ -80,6 +81,7 @@
 		FC5933AB1CAEC9ED00081C4A /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCategory.swift; sourceTree = "<group>"; };
 		FC5933AF1CAECC1900081C4A /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		FC60E1D11CBC26BE0003D87F /* BIllService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BIllService.swift; path = Service/BIllService.swift; sourceTree = "<group>"; };
 		FC839DC81CB808B200827448 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleService.swift; path = Service/ArticleService.swift; sourceTree = "<group>"; };
 		FC839DCA1CB8159B00827448 /* ArticleCategoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleCategoryService.swift; path = Service/ArticleCategoryService.swift; sourceTree = "<group>"; };
 		FC839DCC1CB8258200827448 /* KuruVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuruVariables.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0108618A1CB6521D00728C5D /* CustomerService.swift */,
 				FC839DC81CB808B200827448 /* ArticleService.swift */,
 				FC839DCA1CB8159B00827448 /* ArticleCategoryService.swift */,
+				FC60E1D11CBC26BE0003D87F /* BIllService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				FC5933AC1CAEC9ED00081C4A /* Article.swift in Sources */,
 				0108618B1CB6521D00728C5D /* CustomerService.swift in Sources */,
+				FC60E1D21CBC26BE0003D87F /* BIllService.swift in Sources */,
 				FC86296C1CB411F400A68A17 /* Customer.swift in Sources */,
 				FC53AB501CA893510045D4E8 /* LoginViewController.swift in Sources */,
 				FC5933AE1CAECB7400081C4A /* ArticleCategory.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftRestModel
 import SwiftyJSON
 
 class CustomerService : SwiftRestModel {
-    let url = "http://jsonplaceholder.typicode.com/posts"
+    let url = "http://37.230.100.23:8080/rest/customers"
     
     init() {
         super.init(rootUrl: self.url)

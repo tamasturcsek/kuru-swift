@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
-            KuruVariables.username = self.customerCode.text!
+            KuruVariables.customer = self.customerCode.text!
             self.presentViewController(vc, animated: true, completion: nil)
         }
         alertController.addAction(OKAction)

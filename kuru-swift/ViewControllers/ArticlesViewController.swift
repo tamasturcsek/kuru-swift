@@ -26,10 +26,23 @@ class ArticlesViewController: UIViewController {
 
     }
     
+    func redrawScroll() {
+        var i = 0 as CGFloat
+        for ac:ArticleCategory in articleCategories{
+            let button   = UIButton(type: UIButtonType.System)
+            button.backgroundColor = UIColor.greenColor()
+            button.setTitle(ac.name, forState: UIControlState.Normal)
+            button.frame = CGRectMake(0+(i*50), 0, 40, 40)
+            self.articleCategoryScroll.addSubview(button)
+            i += 1
+        }
+    }
+    
     func refreshArticleCategories() {
         ArticleCategory.findAll({
             response in
             self.articleCategories = response
+            self.redrawScroll()
             
         })
     }
