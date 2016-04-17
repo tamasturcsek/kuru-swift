@@ -24,4 +24,9 @@ class ArticleCategory {
     class func findAll(success: ((response: [ArticleCategory]) -> ())) {
         articleCategoryService.findAll(success)
     }
+    
+    class func findByArticleCategoryId(id: Int, success: ((response: [ArticleCategory]) -> ())) {
+        articleCategoryService.findByArticleCategoryId(id, onSuccess:success)
+    }
+    
 }

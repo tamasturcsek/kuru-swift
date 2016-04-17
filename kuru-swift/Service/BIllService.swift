@@ -6,7 +6,7 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
-/*import Foundation
+import Foundation
 import SwiftRestModel
 import SwiftyJSON
 
@@ -23,7 +23,7 @@ class BillService : SwiftRestModel {
             
             var bills = [Bill]()
             for (_,subJson):(String, JSON) in response {
-                bills.append(Bill(id: subJson["id"].int!, customer: subJson["customer"].customer!, opendate: subJson["opendate"].string!, closedate: subJson["closedate"].string?, sum: subJson["sum"].int!, currency: subJson["currency"].int!))
+                bills.append(Bill(id: subJson["id"].int!, opendate: subJson["opendate"].string!, closedate: subJson["closedate"].string!, sum: subJson["sum"].int!, currency: subJson["currency"].string!))
             }
             onSuccess(response: bills)
             
@@ -32,4 +32,3 @@ class BillService : SwiftRestModel {
         
     }
 }
-*/

@@ -13,7 +13,7 @@ import SwiftyJSON
 class ArticlesViewController: UIViewController {
     
     @IBOutlet weak var articleCategoryScroll: UIScrollView!
-    var containerView = UIView()
+    var containerView: UIView!
     @IBOutlet weak var articlesView: UICollectionView!
     var articles = [Article]()
     var articleCategories = [ArticleCategory]()
@@ -27,13 +27,14 @@ class ArticlesViewController: UIViewController {
     }
     
     func redrawScroll() {
+        //self.articleCategoryScroll.addSubview(containerView)
         var i = 0 as CGFloat
         for ac:ArticleCategory in articleCategories{
             let button   = UIButton(type: UIButtonType.System)
             button.backgroundColor = UIColor.greenColor()
             button.setTitle(ac.name, forState: UIControlState.Normal)
             button.frame = CGRectMake(0+(i*50), 0, 40, 40)
-            self.articleCategoryScroll.addSubview(button)
+            self.containerView.addSubview(button)
             i += 1
         }
     }
@@ -45,6 +46,15 @@ class ArticlesViewController: UIViewController {
             self.redrawScroll()
             
         })
+        
+        ArticleCategory.findByArticleCategoryId(
+            4,success: {
+            response in
+            self.articleCategories = response
+            self.redrawScroll()
+            
+        })
+        
     }
     
     

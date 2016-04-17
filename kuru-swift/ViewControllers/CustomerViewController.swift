@@ -24,18 +24,23 @@ class CustomerViewController: UITableViewController{
         
       refresh()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        userTable.reloadData()
+    }
 
     func refresh() {
         Customer.findAll({
             response in
             self.customers = response
             
-            self.refreshControl?.endRefreshing()
+            /*self.refreshControl?.endRefreshing()
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.userTable.reloadData()
             })
-            }
+            }*/
         })
     }
     func refresh(sender:AnyObject) {

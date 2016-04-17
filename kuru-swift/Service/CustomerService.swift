@@ -23,7 +23,7 @@ class CustomerService : SwiftRestModel {
          
             var customers = [Customer]()
             for (_,subJson):(String, JSON) in response {
-                customers.append(Customer(id: subJson["id"].int!, code: String(subJson["userId"].int!), name: subJson["title"].string!))
+                customers.append(Customer(id: subJson["id"].int!, code: subJson["userId"].string!, name: subJson["title"].string!/*, bills: subJson["bills"].string!*/))
             }
            onSuccess(response: customers)
             
