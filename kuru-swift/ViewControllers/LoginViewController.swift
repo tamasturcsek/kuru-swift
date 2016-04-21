@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var waiterUsername: UITextField!
     @IBOutlet weak var waiterPassword: UITextField!
     @IBOutlet weak var waiterButton: UIButton!
@@ -25,24 +24,42 @@ class LoginViewController: UIViewController {
     }
     
     func waiterlogin(sender: UIButton!) {
-        let alertView = UIAlertView();
-        alertView.addButtonWithTitle("Ok");
-        alertView.title = waiterUsername.text!;
-        alertView.message = waiterPassword.text;
-        alertView.show();
+        let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + waiterUsername.text!, preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
+            KuruVariables.username = self.waiterUsername.text!
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        alertController.addAction(OKAction)
         
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
         
     }
     
     func customerlogin(sender: UIButton!) {
-        let alertView = UIAlertView();
-        alertView.addButtonWithTitle("Ok");
-        alertView.title = customerCode.text!;
-        alertView.message = customerCode.text;
-        alertView.show();
+        let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + customerCode.text!, preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
+            KuruVariables.customer = self.customerCode.text!
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        alertController.addAction(OKAction)
+        
+        let CancelAction = UIAlertAction(title: "Mégsem", style: .Cancel) { (action) in
+            // Do nothing
+        }
+        alertController.addAction(CancelAction)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
+ 
+        
     }
     
     

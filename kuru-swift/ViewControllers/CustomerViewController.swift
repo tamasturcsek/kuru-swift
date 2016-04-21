@@ -24,6 +24,11 @@ class CustomerViewController: UITableViewController{
         
       refresh()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        userTable.reloadData()
+    }
 
     func refresh() {
         Customer.findAll({
