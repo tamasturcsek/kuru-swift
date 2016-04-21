@@ -31,11 +31,9 @@ class CustomerViewController: UITableViewController{
             self.customers = response
             
             self.refreshControl?.endRefreshing()
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), {
                 self.userTable.reloadData()
             })
-            }
         })
     }
     func refresh(sender:AnyObject) {
@@ -54,6 +52,10 @@ class CustomerViewController: UITableViewController{
         cell.textLabel?.text = customer.name
         
         return cell
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
