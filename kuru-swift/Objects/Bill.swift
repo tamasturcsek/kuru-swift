@@ -7,17 +7,19 @@
 //
 
 class Bill {
-    var id: Int
-    var opendate: String
-    var closedate: String?
-    var sum: Int
-    var currency: String
+    let id: Int
+    let openDate: String
+    let closeDate: String?
+    let sum: Int
+    let currency: String
+    let closed :Bool
     
-    init(id: Int, opendate: String, closedate: String, sum: Int, currency: String) {
+    init(id: Int, openDate: String, closeDate: String, sum: Int, currency: String, closed: Bool) {
         self.id = id
-        self.opendate = opendate
-        self.closedate = closedate
+        self.openDate = openDate
+        self.closeDate = closeDate
         self.sum = sum
         self.currency = currency
+        self.closed = closed
     }
 }

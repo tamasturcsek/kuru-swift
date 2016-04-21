@@ -20,7 +20,7 @@ class CustomerServiceTests :XCTestCase {
             asyncExpectation.fulfill()
         })
         
-        self.waitForExpectationsWithTimeout(5) { error in
+        self.waitForExpectationsWithTimeout(10) { error in
             
             XCTAssertNil(error, "Something went horribly wrong")
             XCTAssertTrue(customers.count > 0)

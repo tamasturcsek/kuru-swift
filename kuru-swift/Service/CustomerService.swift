@@ -23,7 +23,13 @@ class CustomerService : SwiftRestModel {
          
             var customers = [Customer]()
             for (_,subJson):(String, JSON) in response {
-                customers.append(Customer(id: subJson["id"].int!, code: subJson["userId"].string!, name: subJson["title"].string!/*, bills: subJson["bills"].string!*/))
+                let customer = Customer(id: subJson["id"].intValue, code: subJson["code"].stringValue, name: subJson["name"].stringValue, bills: [Bill]())
+                for (_,billsSubJson):(String, JSON) in subJson["bills"] {
+                    let bill = Bill(id: billsSubJson["id"].intValue, openDate: String(billsSubJson["openDate"].intValue), closeDate: String(billsSubJson["closeDate"].intValue),sum: billsSubJson["sum"].intValue, currency: billsSubJson["currency"].stringValue, closed: billsSubJson["closed"].boolValue)
+                    customer.bills.append(bill)
+                }
+                
+                customers.append(customer)
             }
            onSuccess(response: customers)
             

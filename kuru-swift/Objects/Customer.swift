@@ -12,13 +12,13 @@ class Customer {
     var id: Int
     var code: String
     var name: String
-    //var bills: [Bill]
+    var bills: [Bill]
     
-    init(id: Int, code: String, name: String/*, bills: [Bill]*/) {
+    init(id: Int, code: String, name: String, bills: [Bill]) {
         self.id = id
         self.code = code
         self.name = name
-        //self.bills = bills
+        self.bills = bills
     }
     
     class func findAll(success: ((response: [Customer]) -> ())) {

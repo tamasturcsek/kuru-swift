@@ -23,7 +23,7 @@ class BillService : SwiftRestModel {
             
             var bills = [Bill]()
             for (_,subJson):(String, JSON) in response {
-                bills.append(Bill(id: subJson["id"].int!, opendate: subJson["opendate"].string!, closedate: subJson["closedate"].string!, sum: subJson["sum"].int!, currency: subJson["currency"].string!))
+                bills.append(Bill(id: subJson["id"].intValue, openDate: subJson["openDate"].stringValue, closeDate: subJson["closeDate"].stringValue, sum: subJson["sum"].intValue, currency: subJson["currency"].stringValue, closed: subJson["closed"].boolValue))
             }
             onSuccess(response: bills)
             

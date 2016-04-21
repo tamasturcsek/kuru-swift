@@ -12,6 +12,7 @@
 		010861901CB652C700728C5D /* CustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108618A1CB6521D00728C5D /* CustomerService.swift */; };
 		010861911CB652EB00728C5D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296B1CB411F400A68A17 /* Customer.swift */; };
 		010861941CB6562B00728C5D /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010861931CB6562B00728C5D /* CustomerTests.swift */; };
+		0123A7F81CC8CEC100C729F1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AF1CAECC1900081C4A /* Bill.swift */; };
 		77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E9D13857563B113DE /* Pods.framework */; };
 		FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */; };
 		FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */; };
@@ -459,6 +460,7 @@
 				FC4E71BA1CA48D42004D9B54 /* kuru_swiftTests.swift in Sources */,
 				0108618F1CB6526300728C5D /* CustomerServiceTests.swift in Sources */,
 				010861911CB652EB00728C5D /* Customer.swift in Sources */,
+				0123A7F81CC8CEC100C729F1 /* Bill.swift in Sources */,
 				010861941CB6562B00728C5D /* CustomerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
