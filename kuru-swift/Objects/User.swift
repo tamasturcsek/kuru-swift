@@ -11,6 +11,12 @@ class User {
     var username: String
     var password: String
     
+    init() {
+        self.id = 0
+        self.username = ""
+        self.password = ""
+    }
+    
     init(id: Int, username: String, password: String) {
         self.id = id
         self.username = username

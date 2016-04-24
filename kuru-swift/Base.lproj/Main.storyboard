@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="4X2-mQ-Llr">
             <objects>
-                <viewController id="PBg-D4-hmR" customClass="LoginViewController" customModule="kuru_swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="PBg-D4-hmR" customClass="LoginViewController" customModule="kuru_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ow-C8-xcR"/>
                         <viewControllerLayoutGuide type="bottom" id="77B-Ni-K3V"/>
@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="width" constant="71" id="Iwp-af-c4b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AZONOSÍTÓ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlc-Yi-73w">
@@ -58,7 +58,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-7R-rJs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-7R-rJs">
                                 <rect key="frame" x="131" y="188" width="46" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="eaj-lh-b93"/>
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="width" constant="78" id="s0e-Nc-xkh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RF-V6-COe">
@@ -126,13 +126,6 @@
         <!--Ügyfelek-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="customerViewController" id="9pv-A4-QxB" customClass="CustomerViewController" customModule="kuru_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ügyfelek" image="user" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="userTable" destination="RgT-RN-LvR" id="7cb-XQ-fG4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RgT-RN-LvR">
                     <rect key="frame" x="0.0" y="0.0" width="560" height="455"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -152,6 +145,64 @@
                         <outlet property="delegate" destination="9pv-A4-QxB" id="59u-gv-L7L"/>
                     </connections>
                 </tableView>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="customerViewController" id="9pv-A4-QxB" customClass="CustomerViewController" customModule="kuru_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jl1-7q-lHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="iMT-K8-bJg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="07H-lK-FWf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Qx-pH-3p4">
+                                <rect key="frame" x="20" y="104" width="560" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="ewo-Pz-gtC">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewo-Pz-gtC" id="28P-3J-slB">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xB-BL-nyL">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Ügyfelek" id="KsL-Xd-vSa">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="B7o-ry-5Uq">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xaI-UK-3LR">
+                                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&lt; Kilépés"/>
+                                                <connections>
+                                                    <action selector="exit:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7uU-mG-XtZ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Qx-pH-3p4" firstAttribute="top" secondItem="4xB-BL-nyL" secondAttribute="bottom" constant="32" id="8Bl-yE-08x"/>
+                            <constraint firstAttribute="trailing" secondItem="4xB-BL-nyL" secondAttribute="trailing" id="O8s-pC-W2U"/>
+                            <constraint firstAttribute="bottom" secondItem="9Qx-pH-3p4" secondAttribute="bottom" constant="20" symbolic="YES" id="TBD-dT-0Ys"/>
+                            <constraint firstItem="4xB-BL-nyL" firstAttribute="leading" secondItem="07H-lK-FWf" secondAttribute="leading" id="YwN-Ce-g6l"/>
+                            <constraint firstItem="9Qx-pH-3p4" firstAttribute="leading" secondItem="07H-lK-FWf" secondAttribute="leadingMargin" id="cTK-Y3-Ap2"/>
+                            <constraint firstItem="4xB-BL-nyL" firstAttribute="top" secondItem="jl1-7q-lHE" secondAttribute="bottom" constant="8" id="m1V-VS-1tI"/>
+                            <constraint firstItem="4xB-BL-nyL" firstAttribute="centerX" secondItem="9Qx-pH-3p4" secondAttribute="centerX" id="ss2-kN-e1H"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ügyfelek" image="user" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="userTable" destination="9Qx-pH-3p4" id="QBg-Dx-AEx"/>
+                    </connections>
+                </viewController>
             </objects>
             <point key="canvasLocation" x="54" y="-1364"/>
         </scene>
@@ -364,24 +415,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="KURU" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lpM-be-ytw">
-                                <rect key="frame" x="254" y="20" width="92" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="Jo0-7C-cvf"/>
-                                    <constraint firstAttribute="height" constant="52" id="tvK-m3-z6W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.3408835388" green="0.66235850809999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="154" y="20" width="92" height="39"/>
-                                </variation>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sKC-CY-B17">
                                 <rect key="frame" x="20" y="288" width="560" height="292"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="292" id="SXc-GA-WQC"/>
+                                    <constraint firstAttribute="height" constant="292" id="eSF-OZ-q0V"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rb-HQ-IJH">
                                     <size key="itemSize" width="75" height="75"/>
@@ -395,18 +433,36 @@
                                 <rect key="frame" x="20" y="124" width="560" height="120"/>
                                 <color key="backgroundColor" red="0.90860193060000005" green="0.90860193060000005" blue="0.90860193060000005" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACf-cG-EIX">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Cikkek" id="1FN-O8-Cjk">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="eix-so-IVI">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cUQ-eM-vz0">
+                                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&lt; Vissza"/>
+                                                <connections>
+                                                    <action selector="back:" destination="cSZ-Gb-lsl" eventType="touchUpInside" id="Z1A-dv-vwf"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="top" secondItem="lpM-be-ytw" secondAttribute="bottom" constant="52" id="2ZT-lz-QsA"/>
-                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="leading" secondItem="zmX-lY-bnM" secondAttribute="leadingMargin" id="5Yy-dg-xHB"/>
-                            <constraint firstItem="sKC-CY-B17" firstAttribute="top" secondItem="Taz-kH-3Kj" secondAttribute="bottom" constant="44" id="GmX-PP-hVz"/>
-                            <constraint firstItem="lpM-be-ytw" firstAttribute="top" secondItem="ZGc-ZI-84H" secondAttribute="bottom" id="P2z-Dd-sJb"/>
-                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="trailing" secondItem="zmX-lY-bnM" secondAttribute="trailingMargin" id="ROa-zf-D2v"/>
-                            <constraint firstAttribute="bottom" secondItem="sKC-CY-B17" secondAttribute="bottom" constant="20" symbolic="YES" id="ahZ-Xa-8pl"/>
-                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="leading" secondItem="sKC-CY-B17" secondAttribute="leading" id="eY5-g0-DDX"/>
-                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="trailing" secondItem="sKC-CY-B17" secondAttribute="trailing" id="gQZ-UH-uI4"/>
-                            <constraint firstItem="lpM-be-ytw" firstAttribute="centerX" secondItem="Taz-kH-3Kj" secondAttribute="centerX" id="zof-Pe-42P"/>
+                            <constraint firstAttribute="trailing" secondItem="ACf-cG-EIX" secondAttribute="trailing" id="37K-TH-0vq"/>
+                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="top" secondItem="ACf-cG-EIX" secondAttribute="bottom" constant="52" id="CzM-3P-62z"/>
+                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="trailing" secondItem="sKC-CY-B17" secondAttribute="trailing" id="IJ8-7y-j9A"/>
+                            <constraint firstAttribute="bottom" secondItem="sKC-CY-B17" secondAttribute="bottom" constant="20" symbolic="YES" id="Iaw-jt-Nle"/>
+                            <constraint firstItem="ACf-cG-EIX" firstAttribute="leading" secondItem="zmX-lY-bnM" secondAttribute="leading" id="KaB-CI-veP"/>
+                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="leading" secondItem="zmX-lY-bnM" secondAttribute="leadingMargin" id="NAd-g2-iJ7"/>
+                            <constraint firstItem="sKC-CY-B17" firstAttribute="top" secondItem="Taz-kH-3Kj" secondAttribute="bottom" constant="44" id="Xyj-UW-Shj"/>
+                            <constraint firstItem="Taz-kH-3Kj" firstAttribute="leading" secondItem="sKC-CY-B17" secondAttribute="leading" id="Y5w-zK-LkQ"/>
+                            <constraint firstItem="ACf-cG-EIX" firstAttribute="top" secondItem="ZGc-ZI-84H" secondAttribute="bottom" constant="8" id="ei2-Zc-wWp"/>
+                            <constraint firstItem="ACf-cG-EIX" firstAttribute="centerX" secondItem="Taz-kH-3Kj" secondAttribute="centerX" id="sER-rJ-6ay"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cikkek" image="items" id="Gg7-uk-qc4"/>

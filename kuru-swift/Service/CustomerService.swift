@@ -11,13 +11,14 @@ import SwiftRestModel
 import SwiftyJSON
 
 class CustomerService : SwiftRestModel {
-    let url = "http://37.230.100.23:8080/rest/customers"
+    var url = "http://37.230.100.23:8080/rest/customers"
     
     init() {
         super.init(rootUrl: self.url)
     }
     
     func findAll(onSuccess: ((response: [Customer]) -> ())){
+        super.rootUrl = "http://37.230.100.23:8080/rest/customers"
         super.fetch(success: {
              response in
          
@@ -35,6 +36,25 @@ class CustomerService : SwiftRestModel {
             
             
         })
-        
+    }
+    
+    
+    func findByCode(code: String, onSuccess: ((response: Customer) -> ())){
+        super.rootUrl = "http://37.230.100.23:8080/rest/customers/" + code
+        super.fetch(success: {
+            response in
+            var customer = Customer()
+            for (_,subJson):(String, JSON) in response {
+                customer = Customer(id: subJson["id"].intValue, code: subJson["code"].stringValue, name: subJson["name"].stringValue, bills: [Bill]())
+                for (_,billsSubJson):(String, JSON) in subJson["bills"] {
+                    let bill = Bill(id: billsSubJson["id"].intValue, openDate: String(billsSubJson["openDate"].intValue), closeDate: String(billsSubJson["closeDate"].intValue),sum: billsSubJson["sum"].intValue, currency: billsSubJson["currency"].stringValue, closed: billsSubJson["closed"].boolValue)
+                    customer.bills.append(bill)
+                }
+                
+            }
+            onSuccess(response: customer)
+            
+            
+        })
     }
 }

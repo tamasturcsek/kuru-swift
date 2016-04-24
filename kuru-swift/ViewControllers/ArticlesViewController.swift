@@ -18,6 +18,8 @@ class ArticlesViewController: UIViewController {
     var articles = [Article]()
     var articleCategories = [ArticleCategory]()
     
+    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,23 +45,43 @@ class ArticlesViewController: UIViewController {
         ArticleCategory.findAll({
             response in
             self.articleCategories = response
-            self.redrawScroll()
+            //self.redrawScroll()
             
         })
         
-        ArticleCategory.findByArticleCategoryId(
-            4,success: {
-            response in
-            self.articleCategories = response
-            self.redrawScroll()
-            
-        })
         
     }
     
     
     func refreshArticleCategories(sender:AnyObject) {
         refreshArticleCategories()
+    }
+    
+    
+    @IBAction func back(sender: AnyObject) {
+        if(KuruVariables.username == "") {
+            let alertController = UIAlertController(title: "Kilépés", message: "Biztos, hogy kijelentkezel?", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "Igen", style: .Default) { (action) in
+                let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
+                KuruVariables.customer = ""
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+            alertController.addAction(OKAction)
+            
+            let CancelAction = UIAlertAction(title: "Mégsem", style: .Cancel) { (action) in
+                // Do nothing
+            }
+            alertController.addAction(CancelAction)
+            
+            
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
+        } else {
+            let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
+            KuruVariables.customer = ""
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
 
     

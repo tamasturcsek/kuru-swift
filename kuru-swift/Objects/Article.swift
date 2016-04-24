@@ -6,6 +6,8 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
+let articleService = ArticleService()
+
 class Article {
     var id: Int
     var code: String
@@ -17,6 +19,18 @@ class Article {
     var active: Bool
     var articleCategory: ArticleCategory
     
+    init() {
+        self.id = 0
+        self.code = ""
+        self.name = ""
+        self.price = 0
+        self.icon = ""
+        self.unit = ""
+        self.description = ""
+        self.active = false
+        self.articleCategory = ArticleCategory()
+    }
+    
     init(id: Int, code: String, name: String, price: Int, icon: String, unit: String, description: String?, active: Bool, articleCategory: ArticleCategory) {
         self.id = id
         self.code = code
@@ -27,5 +41,13 @@ class Article {
         self.description = description
         self.active = active
         self.articleCategory = articleCategory
+    }
+    
+    class func findAll(success: ((response: [Article]) -> ())) {
+        articleService.findAll(success)
+    }
+    
+    class func findByArticleCategoryId(id: Int, success: ((response: [Article]) -> ())) {
+        articleService.findByArticleCategoryId(id, onSuccess:success)
     }
 }

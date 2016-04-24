@@ -6,6 +6,8 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
+let billService = BillService()
+
 class Bill {
     let id: Int
     let openDate: String
@@ -13,6 +15,15 @@ class Bill {
     let sum: Int
     let currency: String
     let closed :Bool
+    
+    init() {
+        self.id = 0
+        self.openDate = ""
+        self.closeDate = ""
+        self.sum = 0
+        self.currency = ""
+        self.closed = false
+    }
     
     init(id: Int, openDate: String, closeDate: String, sum: Int, currency: String, closed: Bool) {
         self.id = id
@@ -22,4 +33,9 @@ class Bill {
         self.currency = currency
         self.closed = closed
     }
+    
+    class func findByCustomerCode(code: String, success: ((response: [Bill]) -> ())) {
+        billService.findByCustomerCode(code, onSuccess:success)
+    }
+    
 }

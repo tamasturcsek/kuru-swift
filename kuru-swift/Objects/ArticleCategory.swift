@@ -14,6 +14,13 @@ class ArticleCategory {
     var name: String
     var icon: String
     
+    init() {
+        self.id = 0
+        self.code = ""
+        self.name = ""
+        self.icon = ""
+    }
+    
     init(id: Int, code: String, name: String, icon: String) {
         self.id = id
         self.code = code
@@ -25,8 +32,5 @@ class ArticleCategory {
         articleCategoryService.findAll(success)
     }
     
-    class func findByArticleCategoryId(id: Int, success: ((response: [ArticleCategory]) -> ())) {
-        articleCategoryService.findByArticleCategoryId(id, onSuccess:success)
-    }
     
 }

@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var customerCode: UITextField!
     @IBOutlet weak var customerButton: UIButton!
     
+    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,8 +28,7 @@ class LoginViewController: UIViewController {
     func waiterlogin(sender: UIButton!) {
         let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + waiterUsername.text!, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
+            let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
             KuruVariables.username = self.waiterUsername.text!
             self.presentViewController(vc, animated: true, completion: nil)
         }
@@ -43,8 +44,7 @@ class LoginViewController: UIViewController {
     func customerlogin(sender: UIButton!) {
         let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + customerCode.text!, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
+            let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
             KuruVariables.customer = self.customerCode.text!
             self.presentViewController(vc, animated: true, completion: nil)
         }

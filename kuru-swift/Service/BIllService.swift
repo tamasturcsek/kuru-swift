@@ -11,13 +11,15 @@ import SwiftRestModel
 import SwiftyJSON
 
 class BillService : SwiftRestModel {
-    let url = "http://37.230.100.23:8080/rest/bills"
+    var url = "http://37.230.100.23:8080/rest/bills"
     
     init() {
         super.init(rootUrl: self.url)
     }
     
-    func findAll(onSuccess: ((response: [Bill]) -> ())){
+    
+    func findByCustomerCode(code: String, onSuccess: ((response: [Bill]) -> ())){
+        self.url = "http://37.230.100.23:8080/rest/customers/" + code + "bills"
         super.fetch(success: {
             response in
             
@@ -29,6 +31,5 @@ class BillService : SwiftRestModel {
             
             
         })
-        
     }
 }

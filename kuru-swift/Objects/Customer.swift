@@ -14,6 +14,13 @@ class Customer {
     var name: String
     var bills: [Bill]
     
+    init() {
+        self.id = 0
+        self.code = ""
+        self.name = ""
+        self.bills = [Bill]()
+    }
+    
     init(id: Int, code: String, name: String, bills: [Bill]) {
         self.id = id
         self.code = code
@@ -23,5 +30,9 @@ class Customer {
     
     class func findAll(success: ((response: [Customer]) -> ())) {
         customerService.findAll(success)
+    }
+    
+    class func findByCode(code: String, success: ((response: Customer) -> ())) {
+        customerService.findByCode(code, onSuccess:success)
     }
 }
