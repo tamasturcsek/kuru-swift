@@ -19,7 +19,7 @@ class ItemService : SwiftRestModel {
     
     
     func findByBillId(billId: Int, onSuccess: ((response: [Item]) -> ())){
-        self.url = "http://37.230.100.23:8080/rest/bills/\(billId)/items"
+        super.rootUrl = "http://37.230.100.23:8080/rest/bills/\(billId)/items"
         super.fetch(success: {
             response in
             

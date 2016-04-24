@@ -19,7 +19,11 @@ class BillService : SwiftRestModel {
     
     
     func findByCustomerCode(code: String, onSuccess: ((response: [Bill]) -> ())){
-        self.url = "http://37.230.100.23:8080/rest/customers/" + code + "bills"
+        if(code == "") {
+            super.rootUrl = "http://37.230.100.23:8080/rest/customers/000000/bills"
+        } else {
+            super.rootUrl = "http://37.230.100.23:8080/rest/customers/" + code + "/bills"
+        }
         super.fetch(success: {
             response in
             
@@ -28,8 +32,6 @@ class BillService : SwiftRestModel {
                 bills.append(Bill(id: subJson["id"].intValue, openDate: subJson["openDate"].stringValue, closeDate: subJson["closeDate"].stringValue, sum: subJson["sum"].intValue, currency: subJson["currency"].stringValue, closed: subJson["closed"].boolValue))
             }
             onSuccess(response: bills)
-            
-            
-        })
+            })
     }
 }

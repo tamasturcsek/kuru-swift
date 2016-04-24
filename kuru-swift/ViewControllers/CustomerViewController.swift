@@ -11,7 +11,6 @@ import UIKit
 class CustomerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var userTable: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationItem!
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     

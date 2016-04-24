@@ -10,10 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ArticlesViewController: UIViewController {
+class ArticlesViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var articleCategoryScroll: UIScrollView!
-    var containerView: UIView!
     @IBOutlet weak var articlesView: UICollectionView!
     var articles = [Article]()
     var articleCategories = [ArticleCategory]()
@@ -23,20 +24,30 @@ class ArticlesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.articleCategoryScroll.delegate = self
         refreshArticleCategories()
         // Do any additional setup after loading the view, typically from a nib.
 
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        refreshArticleCategories()
+        buildBackButton()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
     func redrawScroll() {
-        //self.articleCategoryScroll.addSubview(containerView)
+        var containerView = UIView()
+        self.articleCategoryScroll.addSubview(containerView)
         var i = 0 as CGFloat
         for ac:ArticleCategory in articleCategories{
             let button   = UIButton(type: UIButtonType.System)
             button.backgroundColor = UIColor.greenColor()
             button.setTitle(ac.name, forState: UIControlState.Normal)
             button.frame = CGRectMake(0+(i*50), 0, 40, 40)
-            self.containerView.addSubview(button)
+            containerView.addSubview(button)
             i += 1
         }
     }
@@ -48,7 +59,6 @@ class ArticlesViewController: UIViewController {
             //self.redrawScroll()
             
         })
-        
         
     }
     
@@ -82,6 +92,18 @@ class ArticlesViewController: UIViewController {
             KuruVariables.customer = ""
             self.presentViewController(vc, animated: true, completion: nil)
         }
+    }
+    
+    func buildBackButton() {
+        if(KuruVariables.username == "") {
+            backButton.setTitle("< Kilépés", forState: UIControlState.Normal)
+        } else {
+            backButton.setTitle("< Vissza", forState: UIControlState.Normal)
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 
     
