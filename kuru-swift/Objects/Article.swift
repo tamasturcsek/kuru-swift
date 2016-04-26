@@ -17,7 +17,6 @@ class Article {
     var unit: String
     var description: String?
     var active: Bool
-    var articleCategory: ArticleCategory
     
     init() {
         self.id = 0
@@ -28,10 +27,9 @@ class Article {
         self.unit = ""
         self.description = ""
         self.active = false
-        self.articleCategory = ArticleCategory()
     }
     
-    init(id: Int, code: String, name: String, price: Int, icon: String, unit: String, description: String?, active: Bool, articleCategory: ArticleCategory) {
+    init(id: Int, code: String, name: String, price: Int, icon: String, unit: String, description: String?, active: Bool) {
         self.id = id
         self.code = code
         self.name = name
@@ -40,7 +38,6 @@ class Article {
         self.unit = unit
         self.description = description
         self.active = active
-        self.articleCategory = articleCategory
     }
     
     class func findAll(success: ((response: [Article]) -> ())) {

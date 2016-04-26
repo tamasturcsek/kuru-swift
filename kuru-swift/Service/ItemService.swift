@@ -27,13 +27,10 @@ class ItemService : SwiftRestModel {
             for (_,subJson):(String, JSON) in response {
                 let item = Item(id: subJson["id"].intValue, bill: Bill(), article: Article(), amount: subJson["amount"].intValue, createdate: subJson["createDate"].stringValue, outdate: subJson["outDate"].stringValue)
                 for(_,billSubJson):(String, JSON) in subJson["bill"] {
-                    item.bill = Bill(id: billSubJson["id"].intValue, openDate: billSubJson["openDate"].stringValue, closeDate: billSubJson["closeDate"].stringValue, sum: billSubJson["sum"].intValue, currency: billSubJson["currency"].stringValue, closed: billSubJson["closed"].boolValue)
+                    item.bill = Bill(id: billSubJson["id"].intValue, openDate: billSubJson["openDate"].stringValue, closeDate: billSubJson["closeDate"].stringValue, sum: billSubJson["sum"].doubleValue, currency: billSubJson["currency"].stringValue, closed: billSubJson["closed"].boolValue)
                 }
                 for (_,articleSubJson):(String, JSON) in response {
-                    item.article = Article(id: articleSubJson["id"].int!, code: articleSubJson["code"].string!, name: articleSubJson["name"].string!, price: articleSubJson["price"].int!, icon: articleSubJson["icon"].string!, unit: articleSubJson["unit"].string!, description: articleSubJson["description"].string, active: articleSubJson["active"].bool!, articleCategory: ArticleCategory())
-                    for (_,articleCategorySubJson):(String, JSON) in subJson["articleCategory"] {
-                        item.article.articleCategory = ArticleCategory(id: articleCategorySubJson["id"].int!, code: articleCategorySubJson["code"].string!, name: articleCategorySubJson["name"].string!, icon: articleCategorySubJson["icon"].string!)
-                    }
+                    item.article = Article(id: articleSubJson["id"].int!, code: articleSubJson["code"].string!, name: articleSubJson["name"].string!, price: articleSubJson["price"].int!, icon: articleSubJson["icon"].string!, unit: articleSubJson["unit"].string!, description: articleSubJson["description"].string, active: articleSubJson["active"].bool!)
                 }
                 items.append(item)
             }

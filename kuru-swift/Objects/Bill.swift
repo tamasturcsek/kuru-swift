@@ -12,7 +12,7 @@ class Bill {
     let id: Int
     let openDate: String
     let closeDate: String?
-    let sum: Int
+    let sum: Double
     let currency: String
     let closed :Bool
     
@@ -25,7 +25,7 @@ class Bill {
         self.closed = false
     }
     
-    init(id: Int, openDate: String, closeDate: String, sum: Int, currency: String, closed: Bool) {
+    init(id: Int, openDate: String, closeDate: String, sum: Double, currency: String, closed: Bool) {
         self.id = id
         self.openDate = openDate
         self.closeDate = closeDate

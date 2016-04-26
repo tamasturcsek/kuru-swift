@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
     }
     
     func customerlogin(sender: UIButton!) {
+        Customer.findByCode(customerCode.text!, success: {
+            responde in
+        })
         let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + customerCode.text!, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController

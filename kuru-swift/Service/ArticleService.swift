@@ -24,11 +24,7 @@ class ArticleService : SwiftRestModel {
             
             var articles = [Article]()
             for (_,subJson):(String, JSON) in response {
-                let article = Article(id: subJson["id"].int!, code: subJson["code"].string!, name: subJson["name"].string!, price: subJson["price"].int!, icon: subJson["icon"].string!, unit: subJson["unit"].string!, description: subJson["description"].string, active: subJson["active"].bool!, articleCategory: ArticleCategory())
-                for (_,articleCategorySubJson):(String, JSON) in subJson["articleCategory"]  {
-                    article.articleCategory = ArticleCategory(id: articleCategorySubJson["id"].int!, code: articleCategorySubJson["code"].string!, name: articleCategorySubJson["name"].string!, icon: articleCategorySubJson["icon"].string!)
-                }
-                articles.append(article)
+                articles.append(Article(id: subJson["id"].int!, code: subJson["code"].string!, name: subJson["name"].string!, price: subJson["price"].int!, icon: subJson["icon"].string!, unit: subJson["unit"].string!, description: subJson["description"].string, active: subJson["active"].bool!))
                 
             }
             onSuccess(response: articles)
@@ -44,11 +40,7 @@ class ArticleService : SwiftRestModel {
             
             var articles = [Article]()
             for (_,subJson):(String, JSON) in response {
-                let article = Article(id: subJson["id"].int!, code: subJson["code"].string!, name: subJson["name"].string!, price: subJson["price"].int!, icon: subJson["icon"].string!, unit: subJson["unit"].string!, description: subJson["description"].string, active: subJson["active"].bool!, articleCategory: ArticleCategory())
-                for (_,articleCategorySubJson):(String, JSON) in subJson["articleCategory"] {
-                    article.articleCategory = ArticleCategory(id: articleCategorySubJson["id"].int!, code: articleCategorySubJson["code"].string!, name: articleCategorySubJson["name"].string!, icon: articleCategorySubJson["icon"].string!)
-                }
-                articles.append(article)
+                articles.append(Article(id: subJson["id"].int!, code: subJson["code"].string!, name: subJson["name"].string!, price: subJson["price"].int!, icon: subJson["icon"].string!, unit: subJson["unit"].string!, description: subJson["description"].string, active: subJson["active"].bool!))
                 
             }
             onSuccess(response: articles)
