@@ -25,8 +25,8 @@ class User {
         self.password = password
     }
     
-    class func login(success: ((response: User) -> ())) {
-        userService.login(success)
+    class func login(data: Dictionary<String, AnyObject> = [:],success: ((response: Int) -> ())) {
+        userService.login(data,onSuccess: success)
     }
     
 }

@@ -7,7 +7,6 @@
 //
 
 let customerService = CustomerService()
-let customerLoginService = CustomerLoginService()
 
 class Customer {
     var id: Int
@@ -31,6 +30,6 @@ class Customer {
     }
     
     class func findByCode(code: String, success: ((response: Customer) -> ())) {
-        customerLoginService.findByCode(code, onSuccess:success)
+        customerService.findByCode(code, onSuccess:success)
     }
 }

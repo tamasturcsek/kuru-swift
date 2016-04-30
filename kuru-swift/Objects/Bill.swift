@@ -7,7 +7,6 @@
 //
 
 let billService = BillService()
-let activeBillService = ActiveBillService()
 
 class Bill {
     let id: Int
@@ -43,7 +42,7 @@ class Bill {
     }
     
     class func findActiveByCustomerCode(code: String, success: ((response: Bill) -> ())) {
-        activeBillService.findActiveByCustomerCode(code, onSuccess:success)
+        billService.findActiveByCustomerCode(code, onSuccess:success)
     }
     
 }

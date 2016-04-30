@@ -14,8 +14,6 @@
 		010861941CB6562B00728C5D /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010861931CB6562B00728C5D /* CustomerTests.swift */; };
 		0123A7F81CC8CEC100C729F1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AF1CAECC1900081C4A /* Bill.swift */; };
 		77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E9D13857563B113DE /* Pods.framework */; };
-		FC4A29991CD50A8600CDB454 /* ActiveBillService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A29981CD50A8600CDB454 /* ActiveBillService.swift */; };
-		FC4A299B1CD50BB500CDB454 /* CustomerLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A299A1CD50BB500CDB454 /* CustomerLoginService.swift */; };
 		FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */; };
 		FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */; };
 		FC4E71A71CA48D42004D9B54 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A61CA48D42004D9B54 /* CartViewController.swift */; };
@@ -67,8 +65,6 @@
 		1A5BAE7E9D13857563B113DE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		FC4A29981CD50A8600CDB454 /* ActiveBillService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveBillService.swift; path = Service/ActiveBillService.swift; sourceTree = "<group>"; };
-		FC4A299A1CD50BB500CDB454 /* CustomerLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerLoginService.swift; path = Service/CustomerLoginService.swift; sourceTree = "<group>"; };
 		FC4E719F1CA48D42004D9B54 /* kuru-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kuru-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
@@ -133,10 +129,8 @@
 			children = (
 				FC839DC81CB808B200827448 /* ArticleService.swift */,
 				FC839DCA1CB8159B00827448 /* ArticleCategoryService.swift */,
-				FC4A29981CD50A8600CDB454 /* ActiveBillService.swift */,
 				FC60E1D11CBC26BE0003D87F /* BIllService.swift */,
 				0108618A1CB6521D00728C5D /* CustomerService.swift */,
-				FC4A299A1CD50BB500CDB454 /* CustomerLoginService.swift */,
 				FCFF106D1CC94C5900611EFA /* ItemService.swift */,
 				FCFF106F1CC9588E00611EFA /* UserService.swift */,
 			);
@@ -472,8 +466,6 @@
 				FC8629701CB413F700A68A17 /* User.swift in Sources */,
 				FCFF10701CC9588E00611EFA /* UserService.swift in Sources */,
 				FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */,
-				FC4A299B1CD50BB500CDB454 /* CustomerLoginService.swift in Sources */,
-				FC4A29991CD50A8600CDB454 /* ActiveBillService.swift in Sources */,
 				FC5933B01CAECC1900081C4A /* Bill.swift in Sources */,
 				FC4EEC571CCFE2EA00DECBB8 /* collectionViewCell.swift in Sources */,
 				FC4E71D31CA496E1004D9B54 /* HistoryViewController.swift in Sources */,

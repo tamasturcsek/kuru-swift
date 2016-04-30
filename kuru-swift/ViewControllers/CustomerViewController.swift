@@ -63,6 +63,7 @@ class CustomerViewController: UIViewController, UITableViewDataSource, UITableVi
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
             KuruVariables.username = ""
             self.presentViewController(vc, animated: true, completion: nil)
+            KuruVariables.cart.removeAll()
         }
         alertController.addAction(OKAction)
         

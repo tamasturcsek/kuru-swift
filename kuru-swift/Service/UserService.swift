@@ -17,13 +17,14 @@ class UserService : SwiftRestModel {
         super.init(rootUrl: self.url)
     }
     
-    func login(onSuccess: ((response: User) -> ())){
-        super.save(success: {
+    func login(data: Dictionary<String, AnyObject> = [:],onSuccess: ((response: Int) -> ())){
+        super.save(data: data,
+            success: {
             response in
-
-            onSuccess(response: User())
-            
-            
+            onSuccess(response: super.statuscode)
+            }, error: {
+                response in
+                onSuccess(response: super.statuscode)
         })
         
     }

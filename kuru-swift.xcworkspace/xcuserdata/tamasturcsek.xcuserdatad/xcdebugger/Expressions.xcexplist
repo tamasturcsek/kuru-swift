@@ -32,6 +32,11 @@
       </ContextState>
       <ContextState
          contextName = "SwiftRestModel.(request(method : String, url : String, data : [String : AnyObject], headers : [String : String], encoding : ParameterEncoding, success : (response : JSON) -&gt; ()?, error : (response : JSON) -&gt; ()?) -&gt; ()).(closure #1):SwiftRestModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "parameters">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "CustomerService.findByCode(String, onSuccess : (response : Customer) -&gt; ()) -&gt; ():CustomerService.swift">

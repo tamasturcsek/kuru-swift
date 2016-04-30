@@ -70,6 +70,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
                 KuruVariables.customer = ""
                 self.presentViewController(vc, animated: true, completion: nil)
+                KuruVariables.cart.removeAll()
             }
             alertController.addAction(OKAction)
             
@@ -86,6 +87,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
             KuruVariables.customer = ""
             self.presentViewController(vc, animated: true, completion: nil)
+            KuruVariables.cart.removeAll()
         }
     }
     

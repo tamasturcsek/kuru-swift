@@ -12,6 +12,8 @@ public class SwiftRestModel: NSObject
     // Model attributes Dictionary
     public var data: JSON
     
+    public var statuscode: Int = 0
+    
     // MARK: - Init
     
     /**
@@ -58,11 +60,7 @@ public class SwiftRestModel: NSObject
     - parameter error  : Error handler callback. `nil` by default.
     */
     public func fetch(data parameters: Dictionary<String, AnyObject> = [:], success: ((response: JSON) -> ())? = nil, error: ((response: JSON) -> ())? = nil) {
-        if (self.isNew()) {
             self.request(method: "get", url: self.rootUrl, data: parameters, success: success, error: error)
-        } else {
-            self.request(method: "get", url: self.rootUrl + "/" + self.data["id"].stringValue, data: parameters, success: success, error: error)
-        }
     }
     
     /**
@@ -137,6 +135,7 @@ public class SwiftRestModel: NSObject
                         error!(response: json)
                     }
                 }
+                self.statuscode = (response.response?.statusCode)!
         }
     }
 }

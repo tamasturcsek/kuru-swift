@@ -119,6 +119,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
                 KuruVariables.customer = ""
                 self.presentViewController(vc, animated: true, completion: nil)
+                KuruVariables.cart.removeAll()
             }
             alertController.addAction(OKAction)
             
@@ -135,6 +136,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
             KuruVariables.customer = ""
             self.presentViewController(vc, animated: true, completion: nil)
+            KuruVariables.cart.removeAll()
         }
     }
     

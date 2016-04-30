@@ -26,22 +26,38 @@ class LoginViewController: UIViewController {
     }
     
     func waiterlogin(sender: UIButton!) {
-        /*User.login({
+        let user: 	[String:AnyObject] = [
+            "username" : waiterUsername.text!,
+            "password" : waiterPassword.text!]
+        var code: Int = 0
+        User.login(user, success: {
             response in
+            code = response
+        })
+        if(self.waiterUsername != "" && self.waiterPassword != "" && code == 200) {
+            let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + self.waiterUsername.text!, preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
+                KuruVariables.username = self.waiterUsername.text!
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
+        } else {
+            let alertController = UIAlertController(title: "Figyelmeztetés", message: "Hibás felhasználónév, vagy jelszó!", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                self.waiterUsername.text = ""
+                self.waiterPassword.text = ""
+            }
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
             
-        })*/
-        let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + waiterUsername.text!, preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
-            KuruVariables.username = self.waiterUsername.text!
-            self.presentViewController(vc, animated: true, completion: nil)
         }
-        alertController.addAction(OKAction)
-        
-        
-        self.presentViewController(alertController, animated: true) {
-            // ...
-        }
+
         
     }
     
