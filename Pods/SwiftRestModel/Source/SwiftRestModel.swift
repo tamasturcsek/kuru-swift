@@ -132,7 +132,7 @@ public class SwiftRestModel: NSObject
                         success!(response: json)
                     }
                 } else {
-                    let json: JSON = ["error": (response.result.error?.userInfo["NSLocalizedDescription"])!]
+                    let json: JSON = ["error": response.result.error!]
                     if error != nil {
                         error!(response: json)
                     }

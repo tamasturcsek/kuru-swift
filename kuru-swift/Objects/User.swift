@@ -6,6 +6,8 @@
 //  Copyright © 2016 Meruem Software. All rights reserved.
 //
 
+let userService = UserService()
+
 class User {
     var id: Int
     var username: String
@@ -22,4 +24,9 @@ class User {
         self.username = username
         self.password = password
     }
+    
+    class func login(success: ((response: User) -> ())) {
+        userService.login(success)
+    }
+    
 }

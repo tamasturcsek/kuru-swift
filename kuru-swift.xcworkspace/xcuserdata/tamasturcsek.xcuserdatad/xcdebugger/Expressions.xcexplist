@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LoginViewController.waiterlogin(UIButton!) -&gt; ():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.customerlogin(UIButton!) -&gt; ():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "customerCode.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.customerCode.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ArticlesViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:ArticlesViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.(customerlogin(UIButton!) -&gt; ()).(closure #1):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CustomerService.(findByCode(String, onSuccess : (response : Customer) -&gt; ()) -&gt; ()).(closure #2):CustomerService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SwiftRestModel.(request(method : String, url : String, data : [String : AnyObject], headers : [String : String], encoding : ParameterEncoding, success : (response : JSON) -&gt; ()?, error : (response : JSON) -&gt; ()?) -&gt; ()).(closure #1):SwiftRestModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CustomerService.findByCode(String, onSuccess : (response : Customer) -&gt; ()) -&gt; ():CustomerService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -7,9 +7,11 @@
 //
 
 let billService = BillService()
+let activeBillService = ActiveBillService()
 
 class Bill {
     let id: Int
+    var customer : Customer
     let openDate: String
     let closeDate: String?
     let sum: Double
@@ -18,6 +20,7 @@ class Bill {
     
     init() {
         self.id = 0
+        self.customer = Customer()
         self.openDate = ""
         self.closeDate = ""
         self.sum = 0
@@ -25,8 +28,9 @@ class Bill {
         self.closed = false
     }
     
-    init(id: Int, openDate: String, closeDate: String, sum: Double, currency: String, closed: Bool) {
+    init(id: Int, customer: Customer, openDate: String, closeDate: String, sum: Double, currency: String, closed: Bool) {
         self.id = id
+        self.customer = customer
         self.openDate = openDate
         self.closeDate = closeDate
         self.sum = sum
@@ -36,6 +40,10 @@ class Bill {
     
     class func findByCustomerCode(code: String, success: ((response: [Bill]) -> ())) {
         billService.findByCustomerCode(code, onSuccess:success)
+    }
+    
+    class func findActiveByCustomerCode(code: String, success: ((response: Bill) -> ())) {
+        activeBillService.findActiveByCustomerCode(code, onSuccess:success)
     }
     
 }

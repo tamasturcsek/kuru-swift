@@ -9,7 +9,6 @@
 let itemService = ItemService()
 
 class Item {
-    var id: Int
     var bill: Bill
     var article: Article
     var amount: Int
@@ -17,7 +16,6 @@ class Item {
     var outdate: String?
     
     init() {
-        self.id = 0
         self.bill = Bill()
         self.article = Article()
         self.amount = 0
@@ -25,8 +23,7 @@ class Item {
         self.outdate = ""
     }
     
-    init(id: Int, bill: Bill, article: Article, amount: Int, createdate: String, outdate: String) {
-        self.id = id
+    init(bill: Bill, article: Article, amount: Int, createdate: String, outdate: String) {
         self.bill = bill
         self.article = article
         self.amount = amount

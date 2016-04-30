@@ -7,25 +7,23 @@
 //
 
 let customerService = CustomerService()
+let customerLoginService = CustomerLoginService()
 
 class Customer {
     var id: Int
     var code: String
     var name: String
-    var bills: [Bill]
     
     init() {
         self.id = 0
         self.code = ""
         self.name = ""
-        self.bills = [Bill]()
     }
     
-    init(id: Int, code: String, name: String, bills: [Bill]) {
+    init(id: Int, code: String, name: String) {
         self.id = id
         self.code = code
         self.name = name
-        self.bills = bills
     }
     
     class func findAll(success: ((response: [Customer]) -> ())) {
@@ -33,6 +31,6 @@ class Customer {
     }
     
     class func findByCode(code: String, success: ((response: Customer) -> ())) {
-        customerService.findByCode(code, onSuccess:success)
+        customerLoginService.findByCode(code, onSuccess:success)
     }
 }

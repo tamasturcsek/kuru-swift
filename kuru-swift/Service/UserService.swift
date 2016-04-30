@@ -17,4 +17,18 @@ class UserService : SwiftRestModel {
         super.init(rootUrl: self.url)
     }
     
+    func login(onSuccess: ((response: User) -> ())){
+        super.save(success: {
+            response in
+
+            onSuccess(response: User())
+            
+            
+        })
+        
+    }
+
+    
+    
+    
 }

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "refreshArticleCategories()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,108 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/Objects/Customer.swift"
-            timestampString = "483124866.964436"
+            timestampString = "483724286.005388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "findByCode(_:success:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/CustomerService.swift"
-            timestampString = "483127063.603748"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "findByCode(_:onSuccess:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.CustomerService.findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
-                  timestampString = "483378062.793102"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.CustomerService.(findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
-                  timestampString = "483378062.793194"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "108">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/CustomerService.swift"
-            timestampString = "483381803.628865"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "findByCode(_:onSuccess:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/CustomerService.swift"
-            timestampString = "483381803.628865"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "findByCode(_:onSuccess:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/CustomerService.swift"
-            timestampString = "483381803.628865"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "findByCode(_:onSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -250,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "redrawScroll()"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,28 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "redrawScroll()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387678.704515"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -330,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/Service/BIllService.swift"
-            timestampString = "483208654.317813"
+            timestampString = "483635732.08495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "findByCustomerCode(_:onSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,12 +250,12 @@
                   moduleName = "kuru-swift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/BIllService.swift"
-                  timestampString = "483207734.154216"
+                  timestampString = "483724014.176353"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "280">
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "428">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -377,12 +265,12 @@
                   moduleName = "kuru-swift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/BIllService.swift"
-                  timestampString = "483207734.154304"
+                  timestampString = "483724014.176455"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "104">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "108">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -425,77 +313,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "redrawScroll()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/LoginViewController.swift"
-            timestampString = "483377004.966082"
+            timestampString = "483697731.600623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "customerlogin(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.LoginViewController.customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
-                  timestampString = "483378062.794973"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "440">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.LoginViewController.(customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
-                  timestampString = "483378062.795073"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/CustomerService.swift"
-            timestampString = "483378062.656505"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "findByCode(_:onSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -522,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "showArticles(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -538,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "showArticles(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -554,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "showArticles(_:)"
             landmarkType = "5">
             <Locations>
@@ -566,30 +390,30 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.ArticlesViewController.waiterlogin (Swift.ImplicitlyUnwrappedOptional&lt;kuru_swift.ArticlesViewController.subclassedUIButton&gt;) -&gt; ()"
+                  symbolName = "kuru_swift.ArticlesViewController.showArticles (Swift.ImplicitlyUnwrappedOptional&lt;kuru_swift.ArticlesViewController.myUIButton&gt;) -&gt; ()"
                   moduleName = "kuru-swift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/ArticlesViewController.swift"
-                  timestampString = "483382282.235687"
+                  timestampString = "483707373.563593"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.ArticlesViewController.(waiterlogin (Swift.ImplicitlyUnwrappedOptional&lt;kuru_swift.ArticlesViewController.subclassedUIButton&gt;) -&gt; ()).(closure #1)"
+                  symbolName = "kuru_swift.ArticlesViewController.(showArticles (Swift.ImplicitlyUnwrappedOptional&lt;kuru_swift.ArticlesViewController.myUIButton&gt;) -&gt; ()).(closure #1)"
                   moduleName = "kuru-swift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/ArticlesViewController.swift"
-                  timestampString = "483382282.235809"
+                  timestampString = "483707373.563877"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
@@ -601,124 +425,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/ArticleService.swift"
-            timestampString = "483384181.320707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "findByArticleCategoryId(_:onSuccess:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.ArticleService.findByArticleCategoryId (Swift.Int, onSuccess : (response : Swift.Array&lt;kuru_swift.Article&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/ArticleService.swift"
-                  timestampString = "483381927.650288"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kuru_swift.ArticleService.(findByArticleCategoryId (Swift.Int, onSuccess : (response : Swift.Array&lt;kuru_swift.Article&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "kuru-swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/ArticleService.swift"
-                  timestampString = "483381927.650421"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/ArticleService.swift"
-            timestampString = "483384181.320707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "findByArticleCategoryId(_:onSuccess:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/Service/ArticleService.swift"
-            timestampString = "483384181.320707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "findByArticleCategoryId(_:onSuccess:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "showAll(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483387904.646369"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "showAll(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483391119.168965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -730,12 +442,508 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483391119.168965"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
+            timestampString = "483719311.576965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/LoginViewController.swift"
+            timestampString = "483697731.600623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "customerlogin(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483636085.171526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.(customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483636085.171613"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483691341.369185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483691342.88911"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftRestModel.SwiftRestModel.(request (method : Swift.String, url : Swift.String, data : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, headers : Swift.Dictionary&lt;Swift.String, Swift.String&gt;, encoding : Alamofire.ParameterEncoding, success : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;, error : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "SwiftRestModel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+                  timestampString = "483721083.848507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftRestModel.SwiftRestModel.(request (method : Swift.String, url : Swift.String, data : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, headers : Swift.Dictionary&lt;Swift.String, Swift.String&gt;, encoding : Alamofire.ParameterEncoding, success : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;, error : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "SwiftRestModel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+                  timestampString = "483721083.848598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "2756">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483691431.210018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483696191.771595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483696237.684151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483696297.692967"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483696442.167006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/LoginViewController.swift"
+            timestampString = "483697718.289121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "waiterlogin(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.waiterlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483698067.162386"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.(waiterlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483698067.162551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/UserService.swift"
+            timestampString = "483697810.466453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "login(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.UserService.login ((response : Swift.Array&lt;kuru_swift.Item&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/UserService.swift"
+                  timestampString = "483697810.470598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.UserService.(login ((response : Swift.Array&lt;kuru_swift.Item&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/UserService.swift"
+                  timestampString = "483697810.47079"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/UserService.swift"
+            timestampString = "483697812.378428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "login(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
+            timestampString = "483719311.576965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/LoginViewController.swift"
+            timestampString = "483706284.023928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "customerlogin(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483706284.026981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.LoginViewController.(customerlogin (Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/LoginViewController.swift"
+                  timestampString = "483706284.027104"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706353.593636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706369.778013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706372.370087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.CustomerService.findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
+                  timestampString = "483706372.374234"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.CustomerService.(findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
+                  timestampString = "483706372.374365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706388.31456"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706455.716339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "findByCode(_:onSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -745,13 +953,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483706551.174191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/CustomerService.swift"
+            timestampString = "483706748.202019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "findByCode(_:onSuccess:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.CustomerService.findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
+                  timestampString = "483706748.206339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.CustomerService.(findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
+                  timestampString = "483706748.206485"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.CustomerService.(findByCode (Swift.String, onSuccess : (response : kuru_swift.Customer) -&gt; ()) -&gt; ()).(closure #2)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/Service/CustomerService.swift"
+                  timestampString = "483706748.206589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
-            timestampString = "483391119.168965"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "showArticles(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -761,12 +1048,44 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/CartViewController.swift"
-            timestampString = "483390501.456619"
+            filePath = "kuru-swift/ViewControllers/ArticlesViewController.swift"
+            timestampString = "483719311.576965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "showAll(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/HistoryViewController.swift"
+            timestampString = "483719845.952655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/ViewControllers/HistoryViewController.swift"
+            timestampString = "483719866.081335"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "refresh()"
             landmarkType = "5">
          </BreakpointContent>
@@ -777,14 +1096,110 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "kuru-swift/ViewControllers/CartViewController.swift"
-            timestampString = "483390501.456619"
+            filePath = "kuru-swift/ViewControllers/HistoryViewController.swift"
+            timestampString = "483719882.201134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "refresh()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.HistoryViewController.refresh () -&gt; ()"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/HistoryViewController.swift"
+                  timestampString = "483721083.851002"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kuru_swift.HistoryViewController.(refresh () -&gt; ()).(closure #1)"
+                  moduleName = "kuru-swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/kuru-swift/ViewControllers/HistoryViewController.swift"
+                  timestampString = "483721083.851099"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kuru-swift/Service/BIllService.swift"
+            timestampString = "483720311.738057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "findByCustomerCode(_:onSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+            timestampString = "483724335.370373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "request(method:url:data:headers:encoding:success:error:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftRestModel.SwiftRestModel.request (method : Swift.String, url : Swift.String, data : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, headers : Swift.Dictionary&lt;Swift.String, Swift.String&gt;, encoding : Alamofire.ParameterEncoding, success : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;, error : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "SwiftRestModel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+                  timestampString = "483724338.770055"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftRestModel.SwiftRestModel.(request (method : Swift.String, url : Swift.String, data : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, headers : Swift.Dictionary&lt;Swift.String, Swift.String&gt;, encoding : Alamofire.ParameterEncoding, success : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;, error : Swift.Optional&lt;(response : SwiftyJSON.JSON) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "SwiftRestModel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamasturcsek/projects/kuru-swift/Pods/SwiftRestModel/Source/SwiftRestModel.swift"
+                  timestampString = "483724338.770178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -22,16 +22,22 @@ class BillService : SwiftRestModel {
         if(code == "") {
             super.rootUrl = "http://37.230.100.23:8080/rest/customers/000000/bills"
         } else {
-            super.rootUrl = "http://37.230.100.23:8080/rest/customers/" + code + "/bills"
+            super.rootUrl = "http://37.230.100.23:8080/rest/customers/\(code)/bills"
         }
         super.fetch(success: {
             response in
             
             var bills = [Bill]()
+            var bill: Bill
             for (_,subJson):(String, JSON) in response {
-                bills.append(Bill(id: subJson["id"].intValue, openDate: subJson["openDate"].stringValue, closeDate: subJson["closeDate"].stringValue, sum: subJson["sum"].doubleValue, currency: subJson["currency"].stringValue, closed: subJson["closed"].boolValue))
+                bill = Bill(id: subJson["id"].intValue, customer: Customer(),openDate: subJson["openDate"].stringValue, closeDate: subJson["closeDate"].stringValue, sum: subJson["sum"].doubleValue, currency: subJson["currency"].stringValue, closed: subJson["closed"].boolValue)
+                for (_,subCustomerJson):(String, JSON) in subJson["customer"] {
+                    bill.customer = Customer(id: subCustomerJson["id"].intValue, code: subCustomerJson["code"].stringValue, name: subCustomerJson["name"].stringValue)
+                }
+                bills.append(bill)
             }
             onSuccess(response: bills)
             })
     }
+
 }

@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
     }
     
     func waiterlogin(sender: UIButton!) {
+        /*User.login({
+            response in
+            
+        })*/
         let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + waiterUsername.text!, preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
@@ -43,25 +47,37 @@ class LoginViewController: UIViewController {
     
     func customerlogin(sender: UIButton!) {
         Customer.findByCode(customerCode.text!, success: {
-            responde in
+            response in
+            let customer = response
+            if(customer.id != 0){
+                let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + self.customerCode.text!, preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                    let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
+                    KuruVariables.customer = self.customerCode.text!
+                    self.presentViewController(vc, animated: true, completion: nil)
+                }
+                alertController.addAction(OKAction)
+                
+                let CancelAction = UIAlertAction(title: "Mégsem", style: .Cancel) { (action) in
+                    // Do nothing
+                }
+                alertController.addAction(CancelAction)
+                
+                self.presentViewController(alertController, animated: true) {
+                    // ...
+                }
+            } else {
+                let alertController = UIAlertController(title: "Figyelmeztetés", message: "Helytelen ügyfélazonosító!", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                    self.customerCode.text = ""
+                }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) {
+                    // ...
+                }
+            }
         })
-        let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + customerCode.text!, preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
-            KuruVariables.customer = self.customerCode.text!
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        alertController.addAction(OKAction)
         
-        let CancelAction = UIAlertAction(title: "Mégsem", style: .Cancel) { (action) in
-            // Do nothing
-        }
-        alertController.addAction(CancelAction)
-        
-        self.presentViewController(alertController, animated: true) {
-            // ...
-        }
- 
         
     }
     

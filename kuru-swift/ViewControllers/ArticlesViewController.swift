@@ -10,23 +10,30 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ArticlesViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var backButton: UIButton!
     
-    @IBOutlet weak var articleCategoryScroll: UIScrollView!
-    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var articlesView: UICollectionView!
+    @IBOutlet weak var articleCatScroll: UIScrollView!
+    @IBOutlet weak var articleCatView: UIView!
     var articles = [Article]()
     var articleCategories = [ArticleCategory]()
+    var activebill = Bill()
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.articleCategoryScroll.delegate = self
+        //self.articlesView.addSubview(self.refreshControl)
+        self.articlesView.dataSource = self
+        self.articlesView.delegate = self
         refreshArticleCategories()
+        getActiveBill()
+        showAll(self)
+
         // Do any additional setup after loading the view, typically from a nib.
 
     }
@@ -38,33 +45,30 @@ class ArticlesViewController: UIViewController, UIScrollViewDelegate, UICollecti
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+
     
     func redrawScroll() {
-        //self.articleCategoryScroll.addSubview(containerView)
+        let allButton = myUIButton(type: UIButtonType.RoundedRect)
+        allButton.backgroundColor = UIColor.orangeColor()
+        allButton.tintColor = UIColor.whiteColor()
+        allButton.setTitle("Minden", forState: UIControlState.Normal)
+        allButton.frame = CGRectMake(10, 10, 80, 80)
+        allButton.addTarget(self, action: #selector(ArticlesViewController.showAll(_:)), forControlEvents: .TouchUpInside)
+        self.articleCatView.addSubview(allButton)
         var i = 0 as CGFloat
         for ac:ArticleCategory in articleCategories{
             let button   = myUIButton(type: UIButtonType.RoundedRect)
-            button.backgroundColor = UIColor.blueColor()
+            button.backgroundColor = UIColor.orangeColor()
             button.tintColor = UIColor.whiteColor()
             button.setTitle(ac.name, forState: UIControlState.Normal)
-            button.frame = CGRectMake(90+(i*80), 10, 70, 70)
+            button.frame = CGRectMake(100+(i*90), 10, 80, 80)
             button.ac = ac
             button.addTarget(self, action: #selector(ArticlesViewController.showArticles(_:)), forControlEvents: .TouchUpInside)
-            self.containerView.frame = CGRectMake(0, 0, 90+(i*180), 120)
-            //articleCategoryScroll.contentSize = CGSize(width: containerView.frame.size.width, height: containerView.frame.size.height)
-            print(containerView.frame.size.width)
-            self.containerView.addSubview(button)
+            self.articleCatView.addSubview(button)
             i += 1
         }
-        /*for ac:ArticleCategory in articleCategories{
-            let button   = UIButton(type: UIButtonType.RoundedRect)
-            button.backgroundColor = UIColor.lightGrayColor()
-            button.tintColor = UIColor.whiteColor()
-            button.setTitle(ac.name, forState: UIControlState.Normal)
-            button.frame = CGRectMake(10+(i*80), 10, 70, 70)
-            self.containerView.addSubview(button)
-            i += 1
-        }*/
+        self.articleCatView.frame = CGRectMake(0, 0, 100+(i*90), 100)
+        articleCatScroll.contentSize = CGSize(width: articleCatView.frame.size.width, height: articleCatView.frame.size.height)
     }
     
     class myUIButton: UIButton {
@@ -81,7 +85,7 @@ class ArticlesViewController: UIViewController, UIScrollViewDelegate, UICollecti
         
     }
     
-    @IBAction func showAll(sender: AnyObject) {
+    func showAll(sender: AnyObject) {
         Article.findAll({
             response in
             self.articles = response
@@ -141,6 +145,13 @@ class ArticlesViewController: UIViewController, UIScrollViewDelegate, UICollecti
             backButton.setTitle("< Vissza", forState: UIControlState.Normal)
         }
     }
+    
+    func getActiveBill() {
+        Bill.findActiveByCustomerCode(KuruVariables.customer,success: {
+            response in
+            self.activebill = response
+        })
+    }
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -148,24 +159,29 @@ class ArticlesViewController: UIViewController, UIScrollViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell :CollectionViewCell = articlesView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        let cell :CollectionViewCell = articlesView.dequeueReusableCellWithReuseIdentifier("articleCell", forIndexPath: indexPath) as! CollectionViewCell
         cell.label.text = articles[indexPath.row].name
+        cell.price.text = String(articles[indexPath.row].price) + "HUF / " + articles[indexPath.row].unit
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Cell \(indexPath.row) selected")
+        KuruVariables.cart.append(Item(bill: self.activebill,article: self.articles[indexPath.row] ,amount: 1,createdate: "",outdate: ""))
+
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(10, 5, 10, 5) // margin between cells
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-
     
-  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 

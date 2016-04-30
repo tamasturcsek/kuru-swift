@@ -30,7 +30,6 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refresh()
         self.cartTable.addSubview(self.refreshControl)
         self.cartTable.dataSource = self
         self.cartTable.delegate = self
@@ -39,6 +38,7 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         buildBackButton()
+        refresh()
         
     }
     
@@ -50,24 +50,16 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
         // Simply adding an object to the data source for this example
         
         refresh()
-        self.cartTable.reloadData()
         refreshControl.endRefreshing()
     }
     
     func refresh() {
-        KuruVariables.cart.append(Item(id: 1,bill: Bill(),article: Article(id: 1,code: "",name: "teszt1",price: 1000,icon: "",unit: "db",description: "",active: true),amount: 2,createdate: "",outdate: ""))
-        
-        KuruVariables.cart.append(Item(id: 2,bill: Bill(),article: Article(id: 1,code: "",name: "teszt12",price: 1000,icon: "",unit: "dl",description: "",active: true),amount: 3,createdate: "",outdate: ""))
-        
-        KuruVariables.cart.append(Item(id: 3,bill: Bill(),article: Article(id: 1,code: "",name: "teszt13",price: 1000,icon: "",unit: "üveg",description: "",active: true),amount: 4,createdate: "",outdate: ""))
-        
-        KuruVariables.cart.append(Item(id: 4,bill: Bill(),article: Article(id: 1,code: "",name: "teszt14",price: 1000,icon: "",unit: "",description: "",active: true),amount: 5,createdate: "",outdate: ""))
-        
         var sum = 0
         for item:Item in KuruVariables.cart {
             sum += item.amount*item.article.price
         }
         sumlabel.text = "\(sum) HUF"
+        self.cartTable.reloadData()
         
     }
     func refresh(sender:AnyObject) {

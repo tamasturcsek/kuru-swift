@@ -35,6 +35,7 @@ class ArticleService : SwiftRestModel {
     
     func findByArticleCategoryId(id: Int, onSuccess: ((response: [Article]) -> ())){
         super.rootUrl = "http://37.230.100.23:8080/rest/articlecategories/\(id)/articles"
+        fetch()
         super.fetch(success: {
             response in
             
