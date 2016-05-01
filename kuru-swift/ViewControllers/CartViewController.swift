@@ -36,6 +36,7 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+        getActiveBill()
         buildBackButton()
         refresh()
         
@@ -118,6 +119,16 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
             response in
             let status = response
             
+        })
+    }
+    
+    func getActiveBill() {
+        Bill.findActiveByCustomerCode(KuruVariables.customer.code,success: {
+            response in
+            let activebill = response
+            for item: Item in KuruVariables.cart {
+                item.bill = activebill
+            }
         })
     }
     

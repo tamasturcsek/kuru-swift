@@ -20,19 +20,14 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var articleCatView: UIView!
     var articles = [Article]()
     var articleCategories = [ArticleCategory]()
-    var activebill = Bill()
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.articlesView.addSubview(self.refreshControl)
         self.articlesView.dataSource = self
         self.articlesView.delegate = self
-        refreshArticleCategories()
-        getActiveBill()
-        showAll(self)
 
         // Do any additional setup after loading the view, typically from a nib.
 
@@ -41,6 +36,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         refreshArticleCategories()
+        showAll(self)
         buildBackButton()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -147,13 +143,6 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
             backButton.setTitle("< Vissza", forState: UIControlState.Normal)
         }
     }
-    
-    func getActiveBill() {
-        Bill.findActiveByCustomerCode(KuruVariables.customer.code,success: {
-            response in
-            self.activebill = response
-        })
-    }
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -168,7 +157,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        KuruVariables.cart.append(Item(bill: self.activebill,article: self.articles[indexPath.row] ,amount: 1,createdate: "",outdate: ""))
+        KuruVariables.cart.append(Item(bill: Bill(),article: self.articles[indexPath.row] ,amount: 1,createdate: String(NSDate().timeIntervalSince1970),outdate: ""))
 
     }
     

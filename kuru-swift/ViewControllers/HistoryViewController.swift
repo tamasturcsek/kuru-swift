@@ -109,7 +109,15 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = historyTable.dequeueReusableCellWithIdentifier("billCell", forIndexPath: indexPath)
         let s = bill.currency == "HUF" ? String(Int(bill.sum)) : String(bill.sum)
         let sum = s + " " + bill.currency
-        cell.textLabel?.text = bill.closed ? sum + " (" + bill.closeDate! + ")" : sum
+        if(bill.closed) {
+            let date = NSDate(timeIntervalSince1970: NSTimeInterval(bill.closeDate!)!)
+            let dateMakerFormatter = NSDateFormatter()
+            dateMakerFormatter.dateFormat = "yyyy.MM.dd"
+            let formatedDate = dateMakerFormatter.stringFromDate(date)
+            cell.textLabel?.text = sum + " (\(formatedDate))"
+        } else {
+            cell.textLabel?.text = sum
+        }
         if(bill.closed) {
             cell.textLabel?.textColor = UIColor.redColor()
         } else {

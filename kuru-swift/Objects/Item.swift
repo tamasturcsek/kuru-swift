@@ -8,7 +8,7 @@
 
 let itemService = ItemService()
 
-class Item {
+class Item{
     var bill: Bill
     var article: Article
     var amount: Int
@@ -40,4 +40,6 @@ class Item {
     }
     
 }
+
+
 
