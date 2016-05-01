@@ -117,7 +117,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
             let alertController = UIAlertController(title: "Kilépés", message: "Biztos, hogy kijelentkezel?", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "Igen", style: .Default) { (action) in
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
-                KuruVariables.customer = ""
+                KuruVariables.customer = Customer()
                 self.presentViewController(vc, animated: true, completion: nil)
                 KuruVariables.cart.removeAll()
             }
@@ -134,7 +134,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
             }
         } else {
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
-            KuruVariables.customer = ""
+            KuruVariables.customer = Customer()
             self.presentViewController(vc, animated: true, completion: nil)
             KuruVariables.cart.removeAll()
         }
@@ -149,7 +149,7 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func getActiveBill() {
-        Bill.findActiveByCustomerCode(KuruVariables.customer,success: {
+        Bill.findActiveByCustomerCode(KuruVariables.customer.code,success: {
             response in
             self.activebill = response
         })

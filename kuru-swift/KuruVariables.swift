@@ -10,7 +10,7 @@ import Foundation
 
 struct KuruVariables {
     static var username = ""
-    static var customer = ""
     static var cart = [Item]()
+    static var customer = Customer()
 
 }

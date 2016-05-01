@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var customerCode: UITextField!
     @IBOutlet weak var customerButton: UIButton!
     
+    var responsecode: Int = 0
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
@@ -23,18 +24,22 @@ class LoginViewController: UIViewController {
         waiterButton.addTarget(self, action: #selector(LoginViewController.waiterlogin(_:)), forControlEvents: .TouchUpInside)
         
         customerButton.addTarget(self, action: #selector(LoginViewController.customerlogin(_:)), forControlEvents: .TouchUpInside)
+        //enableEnterKeyForFields()
     }
     
     func waiterlogin(sender: UIButton!) {
         let user: 	[String:AnyObject] = [
             "username" : waiterUsername.text!,
             "password" : waiterPassword.text!]
-        var code: Int = 0
         User.login(user, success: {
             response in
-            code = response
+            self.responsecode = response
+            self.login()
         })
-        if(self.waiterUsername != "" && self.waiterPassword != "" && code == 200) {
+    }
+    
+    func login() {
+        if(responsecode == 200) {
             let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + self.waiterUsername.text!, preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
@@ -58,7 +63,6 @@ class LoginViewController: UIViewController {
             
         }
 
-        
     }
     
     func customerlogin(sender: UIButton!) {
@@ -69,7 +73,7 @@ class LoginViewController: UIViewController {
                 let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + self.customerCode.text!, preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                     let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
-                    KuruVariables.customer = self.customerCode.text!
+                    KuruVariables.customer = customer
                     self.presentViewController(vc, animated: true, completion: nil)
                 }
                 alertController.addAction(OKAction)
@@ -95,6 +99,12 @@ class LoginViewController: UIViewController {
         })
         
         
+    }
+    
+    func enableEnterKeyForFields() {
+        //waiterUsername.focus
+        waiterPassword.enablesReturnKeyAutomatically = true
+        customerCode.enablesReturnKeyAutomatically = true
     }
     
     

@@ -35,5 +35,9 @@ class Item {
         itemService.findByBillId(id, onSuccess:success)
     }
     
+    class func save(items: [Item],success: ((response: Int) -> ())) {
+        itemService.save(items,onSuccess: success)
+    }
+    
 }
 

@@ -14,7 +14,6 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     @IBOutlet weak var sumlabel: UILabel!
     @IBOutlet weak var cartTable: UITableView!
     @IBOutlet weak var summary: UILabel!
-    @IBOutlet weak var buyItems: UIButton!
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
@@ -74,10 +73,15 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->   UITableViewCell {
         let item = KuruVariables.cart[indexPath.row]
-        cartTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cartCell")
-        let cell = cartTable.dequeueReusableCellWithIdentifier("cartCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "\(item.article.name) -  \(item.amount) \(item.article.unit) x \(item.amount*item.article.price) HUF"
-        
+        let cell: TableViewCell = cartTable.dequeueReusableCellWithIdentifier("cartCell", forIndexPath: indexPath) as! TableViewCell
+        cell.article.text = item.article.name
+        cell.amount.text = String(item.amount)
+        cell.price.text = String(item.article.price * item.amount) + " HUF"
+        cell.minus.item = item
+        cell.minus.id = indexPath.row
+        cell.minus.addTarget(self, action: #selector(CartViewController.removeItem(_:)), forControlEvents: .TouchUpInside)
+        cell.plus.item = item
+        cell.plus.addTarget(self, action: #selector(CartViewController.addItem(_:)), forControlEvents: .TouchUpInside)
         return cell
     }
     
@@ -94,12 +98,35 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     }
     
     
+    func removeItem(sender: CartUIButton) {
+        let item = sender.item
+        if(item?.amount == 1) {
+            KuruVariables.cart.removeAtIndex(sender.id!)
+        }else {
+            item!.amount -= 1
+        }
+        refresh()
+    }
+    
+    func addItem(sender: CartUIButton) {
+        sender.item!.amount += 1
+        refresh()
+    }
+    
+    @IBAction func buyItems(sender: AnyObject) {
+        Item.save(KuruVariables.cart,success: {
+            response in
+            let status = response
+            
+        })
+    }
+    
     @IBAction func back(sender: AnyObject) {
         if(KuruVariables.username == "") {
             let alertController = UIAlertController(title: "Kilépés", message: "Biztos, hogy kijelentkezel?", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "Igen", style: .Default) { (action) in
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
-                KuruVariables.customer = ""
+                KuruVariables.customer = Customer()
                 self.presentViewController(vc, animated: true, completion: nil)
                 KuruVariables.cart.removeAll()
             }
@@ -116,7 +143,7 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
             }
         } else {
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
-            KuruVariables.customer = ""
+            KuruVariables.customer = Customer()
             self.presentViewController(vc, animated: true, completion: nil)
             KuruVariables.cart.removeAll()
         }

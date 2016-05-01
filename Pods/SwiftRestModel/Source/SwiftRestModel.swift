@@ -126,16 +126,17 @@ public class SwiftRestModel: NSObject
                     let json = JSON(data: response.data!)
                     self.data = json
                     self.parse()
+                    self.statuscode = (response.response?.statusCode)!
                     if success != nil {
                         success!(response: json)
                     }
                 } else {
                     let json: JSON = ["error": response.result.error!]
+                    self.statuscode = (response.response?.statusCode)!
                     if error != nil {
                         error!(response: json)
                     }
                 }
-                self.statuscode = (response.response?.statusCode)!
         }
     }
 }

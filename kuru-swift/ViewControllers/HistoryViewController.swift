@@ -51,7 +51,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
 
     func refresh() {
-        Bill.findByCustomerCode(KuruVariables.customer,success: {
+        Bill.findByCustomerCode(KuruVariables.customer.code,success: {
             response in
             self.bills = response
             self.historyTable.reloadData()
@@ -68,7 +68,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             let alertController = UIAlertController(title: "Kilépés", message: "Biztos, hogy kijelentkezel?", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "Igen", style: .Default) { (action) in
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
-                KuruVariables.customer = ""
+                KuruVariables.customer = Customer()
                 self.presentViewController(vc, animated: true, completion: nil)
                 KuruVariables.cart.removeAll()
             }
@@ -85,7 +85,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         } else {
             let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
-            KuruVariables.customer = ""
+            KuruVariables.customer = Customer()
             self.presentViewController(vc, animated: true, completion: nil)
             KuruVariables.cart.removeAll()
         }

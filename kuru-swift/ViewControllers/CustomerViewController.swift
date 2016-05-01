@@ -103,7 +103,7 @@ class CustomerViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         userTable.deselectRowAtIndexPath(indexPath, animated: true)
         let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
-        KuruVariables.customer = customers[indexPath.row].code
+        KuruVariables.customer = customers[indexPath.row]
         self.presentViewController(vc, animated: true, completion: nil)
     }
     

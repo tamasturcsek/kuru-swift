@@ -40,5 +40,24 @@ class ItemService : SwiftRestModel {
             onSuccess(response: items)
         })
     }
+    
+    func save(items: [Item],onSuccess: ((response: Int) -> ())){
+        for item: Item in items {
+            let data: 	[String:AnyObject] = [
+                "bill" : item.bill,
+                "article" : item.article,
+                "amount" : item.amount,
+                "createdate" : item.createdate,
+                "outdate" : item.outdate!]
+            super.save(data: data,
+                       success: {
+                        response in
+                        onSuccess(response: super.statuscode)
+                }, error: {
+                    response in
+                    onSuccess(response: super.statuscode)
+            })
+        }
+    }
 }
 
