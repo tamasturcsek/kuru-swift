@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var customerCode: UITextField!
     @IBOutlet weak var customerButton: UIButton!
     
-    var responsecode: Int = 0
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
@@ -33,13 +32,29 @@ class LoginViewController: UIViewController {
             "password" : waiterPassword.text!]
         User.login(user, success: {
             response in
-            self.responsecode = response
-            self.login()
+            if(response == 200) {
+                self.login()
+            }
+            else {
+                self.showError()
+            }
         })
     }
     
+    func showError() {
+        let alertController = UIAlertController(title: "Figyelmeztetés", message: "Hibás felhasználónév, vagy jelszó!", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.waiterUsername.text = ""
+            self.waiterPassword.text = ""
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
+    }
+    
     func login() {
-        if(responsecode == 200) {
+        
             let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkeztél a következő azonosítóval: " + self.waiterUsername.text!, preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                 let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("customerViewController") as UIViewController
@@ -50,18 +65,6 @@ class LoginViewController: UIViewController {
             self.presentViewController(alertController, animated: true) {
                 // ...
             }
-        } else {
-            let alertController = UIAlertController(title: "Figyelmeztetés", message: "Hibás felhasználónév, vagy jelszó!", preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                self.waiterUsername.text = ""
-                self.waiterPassword.text = ""
-            }
-            alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true) {
-                // ...
-            }
-            
-        }
 
     }
     
@@ -69,7 +72,6 @@ class LoginViewController: UIViewController {
         Customer.findByCode(customerCode.text!, success: {
             response in
             let customer = response
-            if(customer.id != 0){
                 let alertController = UIAlertController(title: "Üdvözöllek", message: "Bejelentkezés a következő azonosítóval: " + self.customerCode.text!, preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                     let vc: UIViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("tabController") as UIViewController
@@ -86,7 +88,9 @@ class LoginViewController: UIViewController {
                 self.presentViewController(alertController, animated: true) {
                     // ...
                 }
-            } else {
+           
+            }, onFailure: {
+                
                 let alertController = UIAlertController(title: "Figyelmeztetés", message: "Helytelen ügyfélazonosító!", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                     self.customerCode.text = ""
@@ -95,7 +99,7 @@ class LoginViewController: UIViewController {
                 self.presentViewController(alertController, animated: true) {
                     // ...
                 }
-            }
+        }
         })
         
         
@@ -108,8 +112,5 @@ class LoginViewController: UIViewController {
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 }

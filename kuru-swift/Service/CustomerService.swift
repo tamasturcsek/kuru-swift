@@ -33,7 +33,7 @@ class CustomerService : SwiftRestModel {
     }
     
     
-    func findByCode(code: String, onSuccess: ((response: Customer) -> ())){
+    func findByCode(code: String, onSuccess: ((response: Customer) -> ()), onFailure: () -> Void){
         if(code == "") {
             onSuccess(response: Customer())
         } else {
@@ -45,7 +45,7 @@ class CustomerService : SwiftRestModel {
                 onSuccess(response: customer)
                 }, error: {
                     response in
-                    onSuccess(response: Customer())
+                   onFailure()
             })
         }
     }

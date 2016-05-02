@@ -17,7 +17,6 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
-    var customers = [Customer]()
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(CartViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)

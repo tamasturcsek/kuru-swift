@@ -29,7 +29,7 @@ class Customer {
         customerService.findAll(success)
     }
     
-    class func findByCode(code: String, success: ((response: Customer) -> ())) {
-        customerService.findByCode(code, onSuccess:success)
+    class func findByCode(code: String, success: ((response: Customer) -> ()), onFailure: () -> Void) {
+        customerService.findByCode(code, onSuccess:success, onFailure: onFailure)
     }
 }

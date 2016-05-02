@@ -138,12 +138,5 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         historyTable.deselectRowAtIndexPath(indexPath, animated: true)
 
     }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }
