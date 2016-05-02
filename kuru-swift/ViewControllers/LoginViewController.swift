@@ -69,6 +69,7 @@ class LoginViewController: UIViewController {
     }
     
     func customerlogin(sender: UIButton!) {
+        if !(customerCode.text?.isEmpty)! {
         Customer.findByCode(customerCode.text!, success: {
             response in
             let customer = response
@@ -90,19 +91,24 @@ class LoginViewController: UIViewController {
                 }
            
             }, onFailure: {
-                
-                let alertController = UIAlertController(title: "Figyelmeztetés", message: "Helytelen ügyfélazonosító!", preferredStyle: .Alert)
-                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                    self.customerCode.text = ""
-                }
-                alertController.addAction(OKAction)
-                self.presentViewController(alertController, animated: true) {
-                    // ...
-                }
+                self.customerDenied()
         
         })
+        } else {
+            self.customerDenied()
+        }
         
-        
+    }
+    
+    func customerDenied() {
+        let alertController = UIAlertController(title: "Figyelmeztetés", message: "Helytelen ügyfélazonosító!", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.customerCode.text = ""
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
     }
     
     func enableEnterKeyForFields() {
