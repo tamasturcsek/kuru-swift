@@ -13,6 +13,19 @@
 		010861911CB652EB00728C5D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296B1CB411F400A68A17 /* Customer.swift */; };
 		010861941CB6562B00728C5D /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010861931CB6562B00728C5D /* CustomerTests.swift */; };
 		0123A7F81CC8CEC100C729F1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AF1CAECC1900081C4A /* Bill.swift */; };
+		0164D1661CD7BCAE009750D5 /* JSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164D1651CD7BCAE009750D5 /* JSONAble.swift */; };
+		0164D1681CD7C0D4009750D5 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164D1671CD7C0D4009750D5 /* DateTests.swift */; };
+		0164D1691CD7C11F009750D5 /* JSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164D1651CD7BCAE009750D5 /* JSONAble.swift */; };
+		0164D16A1CD7C13D009750D5 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC839DC81CB808B200827448 /* ArticleService.swift */; };
+		0164D16B1CD7C140009750D5 /* BIllService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60E1D11CBC26BE0003D87F /* BIllService.swift */; };
+		0164D16C1CD7C143009750D5 /* ArticleCategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC839DCA1CB8159B00827448 /* ArticleCategoryService.swift */; };
+		0164D16D1CD7C151009750D5 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AB1CAEC9ED00081C4A /* Article.swift */; };
+		0164D16E1CD7C154009750D5 /* ArticleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5933AD1CAECB7400081C4A /* ArticleCategory.swift */; };
+		0164D16F1CD7C161009750D5 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF106D1CC94C5900611EFA /* ItemService.swift */; };
+		0164D1701CD7C163009750D5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF106F1CC9588E00611EFA /* UserService.swift */; };
+		0164D1711CD7C172009750D5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86296D1CB4130D00A68A17 /* Item.swift */; };
+		0164D1731CD7C1C2009750D5 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164D1721CD7C1C2009750D5 /* StringExtensions.swift */; };
+		0164D1741CD7C1EC009750D5 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164D1721CD7C1C2009750D5 /* StringExtensions.swift */; };
 		77CD18416300C7377CD909A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E9D13857563B113DE /* Pods.framework */; };
 		FC4E71A31CA48D42004D9B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A21CA48D42004D9B54 /* AppDelegate.swift */; };
 		FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4E71A41CA48D42004D9B54 /* ArticlesViewController.swift */; };
@@ -64,6 +77,9 @@
 		0108618A1CB6521D00728C5D /* CustomerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerService.swift; path = Service/CustomerService.swift; sourceTree = "<group>"; };
 		0108618E1CB6526300728C5D /* CustomerServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerServiceTests.swift; sourceTree = "<group>"; };
 		010861931CB6562B00728C5D /* CustomerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
+		0164D1651CD7BCAE009750D5 /* JSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAble.swift; sourceTree = "<group>"; };
+		0164D1671CD7C0D4009750D5 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		0164D1721CD7C1C2009750D5 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		1A5BAE7E9D13857563B113DE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		586B9496CF3EAE86B61E42A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE5AA287422E7156EEB1672A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +236,7 @@
 				0108618D1CB6525200728C5D /* service */,
 				FC4E71B91CA48D42004D9B54 /* kuru_swiftTests.swift */,
 				FC4E71BB1CA48D42004D9B54 /* Info.plist */,
+				0164D1671CD7C0D4009750D5 /* DateTests.swift */,
 			);
 			path = "kuru-swiftTests";
 			sourceTree = "<group>";
@@ -240,6 +257,8 @@
 				FC4EEC561CCFE2EA00DECBB8 /* CollectionViewCell.swift */,
 				FC54FEB31CD61D0F00EFD3BE /* TableViewCell.swift */,
 				FC54FEB61CD62FE700EFD3BE /* CartUIButton.swift */,
+				0164D1651CD7BCAE009750D5 /* JSONAble.swift */,
+				0164D1721CD7C1C2009750D5 /* StringExtensions.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -469,12 +488,14 @@
 				FC839DCB1CB8159B00827448 /* ArticleCategoryService.swift in Sources */,
 				FC54FEC11CD688AC00EFD3BE /* JsonSerializerSwift.swift in Sources */,
 				FC839DCD1CB8258200827448 /* KuruVariables.swift in Sources */,
+				0164D1661CD7BCAE009750D5 /* JSONAble.swift in Sources */,
 				FC4E71D51CA4989D004D9B54 /* CustomerViewController.swift in Sources */,
 				FC8629701CB413F700A68A17 /* User.swift in Sources */,
 				FCFF10701CC9588E00611EFA /* UserService.swift in Sources */,
 				FC54FEB41CD61D0F00EFD3BE /* TableViewCell.swift in Sources */,
 				FC4E71A51CA48D42004D9B54 /* ArticlesViewController.swift in Sources */,
 				FC5933B01CAECC1900081C4A /* Bill.swift in Sources */,
+				0164D1731CD7C1C2009750D5 /* StringExtensions.swift in Sources */,
 				FC4EEC571CCFE2EA00DECBB8 /* CollectionViewCell.swift in Sources */,
 				FC4E71D31CA496E1004D9B54 /* HistoryViewController.swift in Sources */,
 			);
@@ -484,12 +505,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0164D16F1CD7C161009750D5 /* ItemService.swift in Sources */,
 				010861901CB652C700728C5D /* CustomerService.swift in Sources */,
+				0164D16C1CD7C143009750D5 /* ArticleCategoryService.swift in Sources */,
 				FC4E71BA1CA48D42004D9B54 /* kuru_swiftTests.swift in Sources */,
+				0164D1711CD7C172009750D5 /* Item.swift in Sources */,
 				0108618F1CB6526300728C5D /* CustomerServiceTests.swift in Sources */,
+				0164D16E1CD7C154009750D5 /* ArticleCategory.swift in Sources */,
+				0164D1681CD7C0D4009750D5 /* DateTests.swift in Sources */,
 				010861911CB652EB00728C5D /* Customer.swift in Sources */,
+				0164D16A1CD7C13D009750D5 /* ArticleService.swift in Sources */,
+				0164D16B1CD7C140009750D5 /* BIllService.swift in Sources */,
+				0164D16D1CD7C151009750D5 /* Article.swift in Sources */,
+				0164D1701CD7C163009750D5 /* UserService.swift in Sources */,
 				0123A7F81CC8CEC100C729F1 /* Bill.swift in Sources */,
 				010861941CB6562B00728C5D /* CustomerTests.swift in Sources */,
+				0164D1691CD7C11F009750D5 /* JSONAble.swift in Sources */,
+				0164D1741CD7C1EC009750D5 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,11 +659,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "kuru-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.kuru-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -641,11 +675,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "kuru-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.kuru-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

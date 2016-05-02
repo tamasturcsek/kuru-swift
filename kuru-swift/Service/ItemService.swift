@@ -25,9 +25,20 @@ class ItemService : SwiftRestModel {
             
             var items = [Item]()
             for (_,subJson):(String, JSON) in response {
-                var item = Item(bill: Bill(), article: Article(), amount: subJson["amount"].intValue, createdate: subJson["createDate"].stringValue, outdate: subJson["outDate"].stringValue)
+                let billOpenDate = NSDate(timeIntervalSince1970: Double(subJson["createDate"].stringValue.subString(0,  length: 10))!)
+                let billCloseDateString = subJson["outDate"].stringValue
+                
+                let billCloseDate :NSDate? = !billCloseDateString.isEmpty ? NSDate(timeIntervalSince1970: Double(billCloseDateString.subString(0,  length: 10))!) : nil
+                
+
+                let item = Item(bill: Bill(), article: Article(), amount: subJson["amount"].intValue, createdate: billOpenDate, outdate: billCloseDate)
                 let billSubJson = subJson["bill"]
-                    item.bill = Bill(id: billSubJson["id"].intValue, customer: Customer(), openDate: billSubJson["openDate"].stringValue, closeDate: billSubJson["closeDate"].stringValue, sum: billSubJson["sum"].doubleValue, currency: billSubJson["currency"].stringValue, closed: billSubJson["closed"].boolValue)
+                let openDate = NSDate(timeIntervalSince1970: Double(billSubJson["openDate"].stringValue.subString(0,  length: 10))!)
+                let closeDateString = billSubJson["closeDate"].stringValue
+                
+                let closeDate :NSDate? = !closeDateString.isEmpty ? NSDate(timeIntervalSince1970: Double(closeDateString.subString(0,  length: 10))!) : nil
+                
+                    item.bill = Bill(id: billSubJson["id"].intValue, customer: Customer(), openDate: openDate, closeDate: closeDate, sum: billSubJson["sum"].doubleValue, currency: billSubJson["currency"].stringValue, closed: billSubJson["closed"].boolValue)
                     let subCustomerJson = billSubJson["customer"]
                     item.bill.customer = Customer(id: subCustomerJson["id"].intValue, code: subCustomerJson["code"].stringValue, name: subCustomerJson["name"].stringValue)
                 let articleSubJson = subJson["article"]
@@ -40,10 +51,8 @@ class ItemService : SwiftRestModel {
     
     func save(items: [Item],onSuccess: ((response: Int) -> ())){
         for item: Item in items {
-            let jsonString = JSONSerializer.toJson(item)
-            //let json = JSON(jsonString)
-            let data = convertStringToDictionary(jsonString)
-            super.save( data: data!,
+            let data = item.toDict()
+            super.save( data: data,
                        success: {
                         response in
                         onSuccess(response: super.statuscode)

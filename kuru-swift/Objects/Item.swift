@@ -8,26 +8,27 @@
 
 let itemService = ItemService()
 
-class Item{
+import Foundation
+class Item :JSONAble{
     var bill: Bill
     var article: Article
     var amount: Int
-    var createdate: String
-    var outdate: String?
+    var createDate: NSDate
+    var outdate: NSDate?
     
     init() {
         self.bill = Bill()
         self.article = Article()
         self.amount = 0
-        self.createdate = ""
-        self.outdate = ""
+        self.createDate = NSDate()
+        self.outdate = nil
     }
     
-    init(bill: Bill, article: Article, amount: Int, createdate: String, outdate: String) {
+    init(bill: Bill, article: Article, amount: Int, createdate: NSDate, outdate: NSDate?) {
         self.bill = bill
         self.article = article
         self.amount = amount
-        self.createdate = createdate
+        self.createDate = createdate
         self.outdate = outdate
     }
     

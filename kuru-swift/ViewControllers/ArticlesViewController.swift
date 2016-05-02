@@ -157,21 +157,27 @@ class ArticlesViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        KuruVariables.cart.append(Item(bill: Bill(),article: self.articles[indexPath.row] ,amount: 1,createdate: String(NSDate().timeIntervalSince1970),outdate: ""))
-
+        let item = Item(bill: Bill(),article: self.articles[indexPath.row] ,amount: 1,createdate: NSDate(),outdate: nil)
+        var incremented = false
+        for var i in KuruVariables.cart {
+            if i.article.id == item.article.id {
+                i.amount += 1
+                incremented = true
+            }
+        }
+        if !incremented {
+            KuruVariables.cart.append(item)
+        }
+        if let badgeValue = tabBarController?.tabBar.items?[1].badgeValue,
+            nextValue = Int(badgeValue)?.successor() {
+            tabBarController?.tabBar.items?[1].badgeValue = String(nextValue)
+        } else {
+            tabBarController?.tabBar.items?[1].badgeValue = "1"
+        }
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 5, 10, 5) // margin between cells
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

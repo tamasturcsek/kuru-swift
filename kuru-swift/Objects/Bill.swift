@@ -8,30 +8,31 @@
 
 let billService = BillService()
 
-class Bill {
+import Foundation
+class Bill :JSONAble{
     let id: Int
     var customer : Customer
-    let openDate: String
-    let closeDate: String?
+    let openDate: NSDate
+    let closeDate: NSDate?
     let sum: Double
     let currency: String
     let closed :Bool
     
     init() {
+        self.openDate = NSDate()
         self.id = 0
         self.customer = Customer()
-        self.openDate = ""
-        self.closeDate = ""
         self.sum = 0
         self.currency = ""
         self.closed = false
+        self.closeDate = nil
     }
     
-    init(id: Int, customer: Customer, openDate: String, closeDate: String, sum: Double, currency: String, closed: Bool) {
+    init(id: Int, customer: Customer, openDate: NSDate, closeDate: NSDate?, sum: Double, currency: String, closed: Bool) {
         self.id = id
         self.customer = customer
         self.openDate = openDate
-        self.closeDate = closeDate == "" ? "" : closeDate[0...9]
+        self.closeDate = closeDate
         self.sum = sum
         self.currency = currency
         self.closed = closed

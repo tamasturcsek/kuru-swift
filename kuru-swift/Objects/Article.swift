@@ -8,7 +8,7 @@
 
 let articleService = ArticleService()
 
-class Article {
+class Article :JSONAble{
     var id: Int
     var code: String
     var name: String

@@ -8,7 +8,7 @@
 
 let userService = UserService()
 
-class User {
+class User :JSONAble{
     var id: Int
     var username: String
     var password: String

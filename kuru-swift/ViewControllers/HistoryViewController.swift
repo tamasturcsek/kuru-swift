@@ -25,7 +25,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refresh()
+
         self.historyTable.addSubview(self.refreshControl)
         self.historyTable.dataSource = self
         self.historyTable.delegate = self
@@ -47,6 +47,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         buildBackButton()
+            refresh()
     }
     
 
@@ -110,7 +111,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let s = bill.currency == "HUF" ? String(Int(bill.sum)) : String(bill.sum)
         let sum = s + " " + bill.currency
         if(bill.closed) {
-            let date = NSDate(timeIntervalSince1970: NSTimeInterval(bill.closeDate!)!)
+            let date = bill.closeDate!
             let dateMakerFormatter = NSDateFormatter()
             dateMakerFormatter.dateFormat = "yyyy.MM.dd"
             let formatedDate = dateMakerFormatter.stringFromDate(date)

@@ -8,7 +8,7 @@
 
 let customerService = CustomerService()
 
-class Customer {
+class Customer :JSONAble{
     var id: Int
     var code: String
     var name: String

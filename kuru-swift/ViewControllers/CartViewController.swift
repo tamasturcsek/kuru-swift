@@ -116,8 +116,10 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
     @IBAction func buyItems(sender: AnyObject) {
         Item.save(KuruVariables.cart,success: {
             response in
-            let status = response
+            KuruVariables.cart.removeAll()
+            self.tabBarController?.tabBar.items?[1].badgeValue = nil
             
+            self.refresh()
         })
     }
     
@@ -166,12 +168,6 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
             backButton.setTitle("< Vissza", forState: UIControlState.Normal)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

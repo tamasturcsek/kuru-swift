@@ -8,7 +8,7 @@
 
 let articleCategoryService = ArticleCategoryService()
 
-class ArticleCategory {
+class ArticleCategory :JSONAble {
     var id: Int
     var code: String
     var name: String
