@@ -106,10 +106,23 @@ class CartViewController: UIViewController,  UITableViewDataSource, UITableViewD
             item!.amount -= 1
         }
         refresh()
+        if let badgeValue = tabBarController?.tabBar.items?[1].badgeValue,
+            nextValue = Int(badgeValue)?.predecessor() {
+            if nextValue != 0 {
+                tabBarController?.tabBar.items?[1].badgeValue = String(nextValue)
+            } else {
+                tabBarController?.tabBar.items?[1].badgeValue = nil
+            }
+        }
+
     }
     
     func addItem(sender: CartUIButton) {
         sender.item!.amount += 1
+        if let badgeValue = tabBarController?.tabBar.items?[1].badgeValue,
+        nextValue = Int(badgeValue)?.successor() {
+            tabBarController?.tabBar.items?[1].badgeValue = String(nextValue)
+        }
         refresh()
     }
     
